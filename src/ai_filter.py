@@ -2,7 +2,7 @@ import json
 import os
 import re
 
-import google.generativeai as genai
+from google import genai
 
 def _strip_html(text: str) -> str:
     return re.sub(r"<[^>]+>", "", text).strip()
@@ -42,14 +42,14 @@ def filter_and_summarize(articles: list[dict], theme: dict, model_name: str) -> 
     if not articles:
         return []
 
-    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-    model = genai.GenerativeModel(
-        model_name=model_name,
-        generation_config={"response_mime_type": "application/json"},
-    )
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
     prompt = _build_prompt(articles, theme["filter_prompt"])
-    response = model.generate_content(prompt)
+    response = client.models.generate_content(
+        model=model_name,
+        contents=prompt,
+        config={"response_mime_type": "application/json"},
+    )
 
     try:
         data = json.loads(response.text)

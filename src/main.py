@@ -78,7 +78,7 @@ def main() -> None:
         try:
             filtered = filter_and_summarize(all_new_articles, theme, model_name)
         except Exception as e:
-            print(f"  警告: AI選別失敗 [{theme['name']}]: {e} — このテーマをスキップします")
+            print(f"  警告: AI選別失敗 [{theme['name']}]: {e} - このテーマをスキップします")
             continue
         print(f"  選別結果: {len(filtered)}件")
 
