@@ -1,0 +1,36 @@
+ai:
+  provider: gemini
+  model: gemini-2.0-flash-lite
+
+themes:
+  - name: AIモデル系
+    sheet_tab: AIモデル系
+    sources:
+      - name: OpenAI News
+        url: https://openai.com/news/rss.xml
+      - name: OpenAI Engineering
+        url: https://openai.com/news/engineering/rss.xml
+      - name: Google DeepMind Blog
+        url: https://deepmind.google/blog/rss.xml
+      - name: Anthropic News
+        url: https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml
+      - name: Anthropic Research
+        url: https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml
+    filter_prompt: |
+      あなたはAI情報のキュレーターです。以下の記事リストを読み、重要なものだけを選別してください。
+
+      【選別基準（いずれかに該当すれば選別対象）】
+      - 新しいAIモデルのリリース・発表
+      - 新機能・API変更
+      - 価格改定
+      - 重要な研究成果・論文
+      - 業界に大きな影響を与えるニュース
+
+      【除外基準（これに該当する場合は除外）】
+      - 採用情報・求人
+      - イベント告知（カンファレンス・ウェビナー等）
+      - 一般的なブログ記事（技術的な新規性がないもの）
+
+      各記事に以下を付与し、1〜2行の日本語で要約してください。
+      - カテゴリ: 新モデル／新機能／価格改定／研究・論文／その他
+      - 重要度: 高（業界全体に影響）／中（一部のユーザーに影響）／低（参考程度）

@@ -1,0 +1,7 @@
+feedparser
+google-generativeai
+gspread
+google-auth
+jinja2
+pyyaml
+python-dotenv
