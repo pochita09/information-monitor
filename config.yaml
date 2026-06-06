@@ -8,8 +8,6 @@ themes:
     sources:
       - name: OpenAI News
         url: https://openai.com/news/rss.xml
-      - name: OpenAI Engineering
-        url: https://openai.com/news/engineering/rss.xml
       - name: Google DeepMind Blog
         url: https://deepmind.google/blog/rss.xml
       - name: Anthropic News
