@@ -8,9 +8,9 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 ROOT = Path(__file__).parent.parent
 PUBLIC_DIR = ROOT / "public"
 TEMPLATE_DIR = ROOT / "templates"
-# Commit the approved visual source with this repository so GitHub Actions can
-# embed the exact same stylesheet as local generation.
-MOCK_FILE = ROOT / "mock" / "monitor-ui-mockup.html"
+# Commit the approved v3 visual source with this repository so GitHub Actions
+# can embed the same stylesheet as local generation.
+MOCK_FILE = ROOT / "mock" / "information-monitor-ui-mock-v3.html"
 
 
 def _mock_css() -> str:
