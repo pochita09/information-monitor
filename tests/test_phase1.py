@@ -56,6 +56,17 @@ class ArchiveTests(unittest.TestCase):
 
 
 class GeminiValidationTests(unittest.TestCase):
+    def test_keeps_short_japanese_title_when_gemini_returns_one(self):
+        response = types.SimpleNamespace(text=json.dumps({"results": [
+            {"index": 1, "score": 8, "title_ja": "短い日本語見出し", "summary_ja": "有効な要約", "tags": ["API"]},
+        ]}))
+        client = types.SimpleNamespace(models=types.SimpleNamespace(generate_content=lambda **kwargs: response))
+        with patch.object(ai_filter.genai, "Client", return_value=client), patch.dict("os.environ", {"GEMINI_API_KEY": "test"}):
+            result = ai_filter.filter_and_summarize([
+                {"item_id": "one", "title": "original title", "url": "https://example.com/1", "summary": "", "published_at": "2026-01-01T00:00:00+00:00"},
+            ], {"topic_id": "test", "filter_prompt": "criteria"}, "test-model")
+        self.assertEqual(result[0]["title_ja"], "短い日本語見出し")
+
     def test_invalid_single_result_does_not_abort_valid_results(self):
         response = types.SimpleNamespace(text=json.dumps({"results": [
             {"index": 1, "score": 8, "summary_ja": "有効な要約", "tags": ["API"]},

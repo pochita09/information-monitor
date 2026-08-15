@@ -25,6 +25,7 @@ def _build_prompt(articles: list[dict], filter_criteria: str) -> str:
 
 あなたは記事を1件も省略せず、すべて1〜10の整数で採点する情報キュレーターです。
 10 は基準に非常によく合い、1 はほとんど合いません。記事本文にない事実は補わないでください。
+日本語タイトルは、原題の単純な直訳ではなく、3〜5秒で内容を判断できる短い見出しにしてください。
 要約は1〜2行の日本語、tags は内容を表す短い日本語または英字タグを最大5個にしてください。
 
 【記事リスト】
@@ -34,7 +35,7 @@ def _build_prompt(articles: list[dict], filter_criteria: str) -> str:
 JSON のみを返してください（説明文不要）:
 {{
   "results": [
-    {{"index": 1, "score": 8, "category": "新モデル|新機能|価格改定|研究・論文|その他", "importance": "高|中|低", "summary_ja": "1〜2行の日本語要約", "tags": ["タグ"]}}
+    {{"index": 1, "score": 8, "title_ja": "内容を端的に示す日本語見出し", "category": "新モデル|新機能|価格改定|研究・論文|その他", "importance": "高|中|低", "summary_ja": "1〜2行の日本語要約", "tags": ["タグ"]}}
   ]
 }}
 """
@@ -75,6 +76,7 @@ def filter_and_summarize(articles: list[dict], theme: dict, model_name: str) -> 
             continue
         score = item.get("score")
         summary_ja = item.get("summary_ja")
+        title_ja = item.get("title_ja")
         tags = item.get("tags")
         if isinstance(score, bool) or not isinstance(score, int) or not 1 <= score <= 10:
             print(f"    警告: AI応答の記事 score が不正です: index={index}")
@@ -82,6 +84,9 @@ def filter_and_summarize(articles: list[dict], theme: dict, model_name: str) -> 
         if not isinstance(summary_ja, str) or not summary_ja.strip():
             print(f"    警告: AI応答の記事 summary_ja が不正です: index={index}")
             continue
+        if title_ja is not None and (not isinstance(title_ja, str) or not title_ja.strip()):
+            print(f"    警告: AI応答の記事 title_ja が不正です: index={index} - 原題を表示します")
+            title_ja = None
         if not isinstance(tags, list) or not all(isinstance(tag, str) and tag.strip() for tag in tags):
             print(f"    警告: AI応答の記事 tags が不正です: index={index}")
             continue
@@ -92,6 +97,7 @@ def filter_and_summarize(articles: list[dict], theme: dict, model_name: str) -> 
             "importance": item.get("importance", "中"),
             "score": score,
             "summary_ja": summary_ja.strip(),
+            "title_ja": title_ja.strip()[:120] if isinstance(title_ja, str) else "",
             "tags": [tag.strip()[:40] for tag in tags[:5]],
             "topic_id": theme["topic_id"],
         })
