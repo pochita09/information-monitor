@@ -2,15 +2,28 @@
 
 RSS / Atom の新着記事を Gemini で採点・要約し、静的な Monitor 画面を GitHub Pages へ公開する個人用ツールです。
 
-## できること（Phase 2）
+## できること（Phase 3）
 
 - RSS / Atom の取得、新着判定、安定した記事IDによる重複防止
 - Gemini による 1〜10 の採点、日本語要約、タグ生成
 - `data/articles.json` と `data/last_seen.json` のアトミック保存
 - 閾値以上と未満を分けた Monitor HTML の生成
 - GitHub Actions による定期実行、状態のcommit、GitHub Pages公開
+- Cloudflare Worker / KV による「良い」「違う」と除外理由の保存・復元
 
-評価保存、Cloudflare Worker / KV、設定保存、Telegramはまだ実装していません。
+設定保存、評価のGemini採点への反映、Telegramはまだ実装していません。
+
+## 評価API（Phase 3）
+
+Workerは `feedback:{item_id}` に記事ごとの最新評価を保存し、`feedback:index` に最大500件のIDを持ちます。同じ記事を再評価すると、履歴を増やさず最新評価で上書きします。
+
+| Endpoint | 用途 |
+| --- | --- |
+| `POST /feedback` | 良い／違う（理由付き）を保存・更新 |
+| `GET /feedback` | 保存済み評価を一覧取得し、ページ読み込み時に復元 |
+| `GET /feedback/:item_id` | 特定記事の評価を取得 |
+
+WorkerはGitHub Pages origin (`https://pochita09.github.io`) と限定したlocalhost開発originだけをCORS許可します。公開Pagesからの書込みを個人用に軽量に運用する設計であり、CORSはユーザー認証ではありません。より強い書込み保護が必要になった場合は、将来のPhaseでCloudflare AccessまたはTurnstileを導入してください。
 
 ## ローカル実行
 

@@ -2,6 +2,9 @@ ai:
   provider: gemini
   model: gemini-2.5-flash-lite
 
+# Phase 3: Workerをdeployした後にworkers.dev URLを設定する（秘密情報ではない）。
+feedback_api_url: ""
+
 themes:
   - topic_id: ai-models
     name: AIモデル系

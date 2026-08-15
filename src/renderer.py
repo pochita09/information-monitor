@@ -67,6 +67,7 @@ def render_monitor(articles: list[dict], config: dict, fetched_count: int, saved
             topics=topics,
             generated_at=_display_time(archive_updated_at) if archive_updated_at else "記事はまだありません",
             archive_count=len(articles),
+            feedback_api_url=config.get("feedback_api_url", ""),
         ),
         encoding="utf-8",
     )
