@@ -8,7 +8,9 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 ROOT = Path(__file__).parent.parent
 PUBLIC_DIR = ROOT / "public"
 TEMPLATE_DIR = ROOT / "templates"
-MOCK_FILE = ROOT.parent / "mock" / "monitor-ui-mockup.html"
+# Commit the approved visual source with this repository so GitHub Actions can
+# embed the exact same stylesheet as local generation.
+MOCK_FILE = ROOT / "mock" / "monitor-ui-mockup.html"
 
 
 def _mock_css() -> str:
@@ -20,7 +22,7 @@ def _mock_css() -> str:
             return match.group(1)
     except OSError as error:
         print(f"警告: UIモックのCSSを読み込めません: {error}")
-    return "body { font-family: sans-serif; margin: 1rem; }"
+    raise RuntimeError("Monitor UI mock stylesheet is missing; refusing to publish unstyled HTML")
 
 
 def _display_time(timestamp: str) -> str:

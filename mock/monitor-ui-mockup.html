@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>監視ログ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEDE8;
+  --card:#F7F8F5;
+  --ink:#14171A;
+  --muted:#6F757A;
+  --rule:#D2D6CF;
+  --blue:#1F35C4;
+  --red:#9E2B2B;
+  --pass:#1F35C4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  padding-bottom:64px;
+}
+.wrap{max-width:640px;margin:0 auto}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:20;
+  background:var(--paper);
+  border-bottom:1px solid var(--rule);
+}
+.masthead{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:14px 18px 10px;
+}
+.masthead h1{
+  font-size:19px;font-weight:900;letter-spacing:.04em;
+}
+.runline{font-size:11px;color:var(--muted);letter-spacing:.02em}
+.runline .dot{
+  display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--blue);margin-right:5px;vertical-align:middle;
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* genre tabs */
+.genres{
+  display:flex;gap:0;overflow-x:auto;
+  padding:0 18px;scrollbar-width:none;
+}
+.genres::-webkit-scrollbar{display:none}
+.genre{
+  appearance:none;background:none;border:none;cursor:pointer;
+  font-family:inherit;color:var(--muted);
+  font-size:13px;font-weight:700;white-space:nowrap;
+  padding:8px 0 9px;margin-right:20px;
+  border-bottom:2px solid transparent;
+}
+.genre .n{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;
+  margin-left:5px;opacity:.7;
+}
+.genre[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--blue)}
+.genre:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ---------- calibration strip : signature ---------- */
+.calib{
+  padding:12px 18px 14px;
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+}
+.calib-top{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:10.5px;letter-spacing:.09em;color:var(--muted);
+  text-transform:uppercase;margin-bottom:7px;
+}
+.calib-top b{color:var(--ink);font-weight:600}
+.ruler{
+  position:relative;height:22px;
+  border-bottom:1px solid var(--ink);
+}
+.ruler .tick{
+  position:absolute;bottom:0;width:1px;background:var(--rule);height:5px;
+}
+.ruler .tick.major{height:9px;background:var(--muted)}
+.ruler .tick .lab{
+  position:absolute;bottom:11px;left:-4px;
+  font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--muted);
+}
+.ruler .cut{
+  position:absolute;bottom:0;top:0;width:2px;background:var(--blue);
+}
+.ruler .cut::after{
+  content:"閾値 6";position:absolute;bottom:24px;left:-14px;
+  font-size:9.5px;color:var(--blue);white-space:nowrap;font-weight:700;
+}
+.ruler .fill{
+  position:absolute;bottom:0;top:6px;left:0;
+  background:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 4px);
+}
+
+/* ---------- items ---------- */
+.list{padding:0 18px}
+.item{
+  display:grid;grid-template-columns:26px 1fr;gap:12px;
+  padding:16px 0;border-bottom:1px solid var(--rule);
+}
+/* level meter — signature */
+.meter{position:relative;padding-top:3px}
+.meter .bar{
+  position:relative;width:5px;height:52px;margin:0 auto;
+  background:var(--rule);
+}
+.meter .lvl{
+  position:absolute;bottom:0;left:0;width:100%;background:var(--pass);
+}
+.meter .lvl.low{background:var(--muted);opacity:.45}
+.meter .thr{
+  position:absolute;left:-4px;width:13px;height:1px;background:var(--ink);
+  bottom:60%;
+}
+.meter .val{
+  display:block;text-align:center;font-size:11px;font-weight:600;
+  margin-top:6px;color:var(--ink);
+}
+.meter .val.low{color:var(--muted)}
+
+.head{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  font-size:10.5px;letter-spacing:.05em;color:var(--muted);margin-bottom:5px;
+}
+.src{color:var(--ink);font-weight:600}
+.chan{
+  border:1px solid var(--rule);padding:1px 5px;
+  font-size:9.5px;letter-spacing:.06em;
+}
+.item h2{
+  font-size:15.5px;font-weight:700;line-height:1.45;letter-spacing:.005em;
+  margin-bottom:5px;
+}
+.item h2 a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+.gist{font-size:13.5px;color:#3A4045;line-height:1.65}
+.keys{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.key{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  color:var(--blue);
+}
+
+/* actions */
+.acts{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.act{
+  appearance:none;font-family:inherit;cursor:pointer;
+  background:var(--card);border:1px solid var(--rule);color:var(--ink);
+  font-size:12px;font-weight:500;padding:6px 11px;
+  transition:background .12s,border-color .12s;
+}
+.act:hover{border-color:var(--ink)}
+.act:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.act[data-on="up"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.act[data-on="down"]{background:var(--red);border-color:var(--red);color:#fff}
+.act.copied{border-color:var(--blue);color:var(--blue)}
+
+/* reason chips */
+.why{
+  margin-top:10px;padding:10px 12px;border-left:2px solid var(--red);
+  background:var(--card);
+}
+.why p{font-size:11px;color:var(--muted);margin-bottom:8px;letter-spacing:.02em}
+.why-row{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  appearance:none;font-family:inherit;cursor:pointer;
+  background:none;border:1px solid var(--rule);color:var(--ink);
+  font-size:12px;padding:5px 10px;
+}
+.chip:hover{border-color:var(--red)}
+.chip[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.chip:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+.logged{
+  margin-top:9px;font-size:11px;color:var(--blue);
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.02em;
+}
+
+/* below threshold section */
+.fold{
+  margin:22px 18px 0;padding-top:14px;border-top:1px solid var(--ink);
+}
+.fold summary{
+  cursor:pointer;list-style:none;font-size:11px;letter-spacing:.08em;
+  color:var(--muted);text-transform:uppercase;
+}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary::after{content:" ＋"}
+.fold[open] summary::after{content:" －"}
+.fold .list{padding:0}
+.fold .item{opacity:.62}
+
+footer{
+  padding:26px 18px 0;font-size:10.5px;color:var(--muted);
+  letter-spacing:.04em;line-height:1.9;
+}
+
+/* ---------- view switch ---------- */
+.switch{display:flex;border:1px solid var(--rule);background:var(--card)}
+.sw{
+  appearance:none;background:none;border:none;cursor:pointer;font-family:inherit;
+  font-size:11.5px;font-weight:700;color:var(--muted);padding:5px 11px;letter-spacing:.03em;
+}
+.sw[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.sw:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ---------- settings ---------- */
+.set{padding:20px 18px 4px;border-bottom:1px solid var(--rule)}
+.set-h{
+  font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;margin-bottom:12px;
+}
+.gset{border:1px solid var(--rule);background:var(--card);margin-bottom:8px}
+.gset summary{
+  cursor:pointer;list-style:none;padding:12px 14px;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+.gset summary::-webkit-details-marker{display:none}
+.gset summary::after{content:"＋";color:var(--muted);font-size:12px}
+.gset[open] summary::after{content:"－"}
+.gset[open] summary{border-bottom:1px solid var(--rule)}
+.gname{font-weight:700;font-size:14px}
+.gmeta{font-size:10.5px;color:var(--muted)}
+.gbody{padding:14px}
+
+.fl{display:block;margin-bottom:18px;font-size:12px;color:var(--muted);letter-spacing:.03em}
+.fl-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.fl-top b{font-size:14px;color:var(--ink)}
+.inp{
+  display:block;width:100%;margin-top:6px;
+  font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--rule);padding:9px 10px;line-height:1.6;
+}
+.inp:focus{outline:2px solid var(--blue);outline-offset:-1px;border-color:var(--blue)}
+.ta{resize:vertical}
+.hint{display:block;margin-top:7px;font-size:11px;color:var(--muted);line-height:1.6}
+
+.rng{width:100%;accent-color:var(--blue);height:26px}
+.scale{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+
+.srcs{margin-top:4px}
+.sw-row{
+  display:flex;align-items:center;gap:9px;padding:8px 0;
+  border-bottom:1px solid var(--rule);font-size:13.5px;color:var(--ink);cursor:pointer;
+}
+.sw-row:last-child{border-bottom:none}
+.sw-row input{accent-color:var(--blue);width:17px;height:17px;flex:none}
+.sw-row i{font-style:normal;font-size:9.5px;color:var(--muted);margin-left:7px;letter-spacing:.06em}
+.set > .sw-row{padding:11px 0}
+
+.times{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.act.add{width:100%;margin:4px 0 18px;padding:10px}
+
+.stats{font-size:12px}
+.stats > div{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid var(--rule)}
+.stats dt{color:var(--muted)}
+.stats dd{text-align:right}
+
+.savebar{padding:18px;text-align:center}
+.save{
+  appearance:none;font-family:inherit;cursor:pointer;width:100%;
+  background:var(--ink);color:var(--paper);border:none;
+  font-size:14px;font-weight:700;padding:13px;letter-spacing:.06em;
+}
+.save:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.save.done{background:var(--blue)}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="masthead">
+    <h1>監視ログ</h1>
+    <div class="switch">
+      <button class="sw" data-view="feed" aria-selected="true">フィード</button>
+      <button class="sw" data-view="settings" aria-selected="false">設定</button>
+    </div>
+  </div>
+  <nav class="genres" role="tablist" aria-label="ジャンル" data-feed>
+    <button class="genre" role="tab" aria-selected="true">AI活用・海外<span class="n">12</span></button>
+    <button class="genre" role="tab" aria-selected="false">自動化の実装<span class="n">7</span></button>
+    <button class="genre" role="tab" aria-selected="false">売り方・オファー<span class="n">4</span></button>
+    <button class="genre" role="tab" aria-selected="false">規制・法務<span class="n">2</span></button>
+  </nav>
+</header>
+
+<section class="calib" aria-label="学習状況" data-feed>
+  <div class="calib-top">
+    <span class="runline mono"><span class="dot"></span>08-14 07:00 取得 / 次 13:00</span>
+  </div>
+  <div class="calib-top">
+    <span>判断の学習 — 評価済み <b>128</b> 件</span>
+    <span>一致率 <b>74%</b></span>
+  </div>
+  <div class="ruler" id="ruler"></div>
+</section>
+
+<main class="list" data-feed>
+
+  <article class="item">
+    <div class="meter">
+      <div class="bar"><div class="lvl" style="height:90%"></div><div class="thr"></div></div>
+      <span class="val mono">9</span>
+    </div>
+    <div>
+      <div class="head mono">
+        <span class="src">Nate Herk</span><span class="chan">YOUTUBE</span><span>3時間前</span>
+      </div>
+      <h2><a href="#">I replaced my whole client onboarding with one n8n agent</a></h2>
+      <p class="gist">問い合わせフォーム→契約書生成→キックオフ資料まで1本のワークフローに畳んだ事例。受注後の事務を丸ごと外注するタイプの売り方に転用できる。</p>
+      <div class="keys mono"><span class="key">#n8n</span><span class="key">#オンボーディング</span><span class="key">#受注後業務</span></div>
+      <div class="acts">
+        <button class="act" data-vote="up">良い</button>
+        <button class="act" data-vote="down">違う</button>
+        <button class="act" data-copy>コピー</button>
+      </div>
+      <div class="fb"></div>
+    </div>
+  </article>
+
+  <article class="item">
+    <div class="meter">
+      <div class="bar"><div class="lvl" style="height:80%"></div><div class="thr"></div></div>
+      <span class="val mono">8</span>
+    </div>
+    <div>
+      <div class="head mono">
+        <span class="src">Cole Medin</span><span class="chan">GITHUB</span><span>今日 05:12</span>
+      </div>
+      <h2><a href="#">ottomator-agents — メモリ層を差し替え可能に</a></h2>
+      <p class="gist">エージェントの記憶をアダプタ方式に変更。ベクトルDBを後から乗り換えられる構成で、自分のツールにもそのまま写せる。</p>
+      <div class="keys mono"><span class="key">#メモリ</span><span class="key">#設計</span></div>
+      <div class="acts">
+        <button class="act" data-vote="up">良い</button>
+        <button class="act" data-vote="down">違う</button>
+        <button class="act" data-copy>コピー</button>
+      </div>
+      <div class="fb"></div>
+    </div>
+  </article>
+
+  <article class="item">
+    <div class="meter">
+      <div class="bar"><div class="lvl" style="height:70%"></div><div class="thr"></div></div>
+      <span class="val mono">7</span>
+    </div>
+    <div>
+      <div class="head mono">
+        <span class="src">Liam Ottley</span><span class="chan">SKOOL</span><span>昨日 22:40</span>
+      </div>
+      <h2><a href="#">Why we stopped charging setup fees</a></h2>
+      <p class="gist">初期構築費をやめて月額に寄せた結果、成約率と解約率がどう動いたかの実数を公開。価格設計の判断材料になる。</p>
+      <div class="keys mono"><span class="key">#価格設計</span><span class="key">#月額</span></div>
+      <div class="acts">
+        <button class="act" data-vote="up">良い</button>
+        <button class="act" data-vote="down">違う</button>
+        <button class="act" data-copy>コピー</button>
+      </div>
+      <div class="fb"></div>
+    </div>
+  </article>
+
+</main>
+
+<details class="fold" data-feed>
+  <summary>閾値より下 — 8件</summary>
+  <div class="list">
+    <article class="item">
+      <div class="meter">
+        <div class="bar"><div class="lvl low" style="height:40%"></div><div class="thr"></div></div>
+        <span class="val low mono">4</span>
+      </div>
+      <div>
+        <div class="head mono">
+          <span class="src">Nick Saraev</span><span class="chan">BLOG</span><span>2日前</span>
+        </div>
+        <h2><a href="#">5 automations every agency needs in 2026</a></h2>
+        <p class="gist">既出テーマのまとめ記事。新しい要素は見当たらない。</p>
+        <div class="acts">
+          <button class="act" data-vote="up">良い</button>
+          <button class="act" data-vote="down">違う</button>
+          <button class="act" data-copy>コピー</button>
+        </div>
+        <div class="fb"></div>
+      </div>
+    </article>
+  </div>
+</details>
+
+<footer data-feed>
+  <div>ソース 27件 / 取得 41件 → 表示 12件</div>
+  <div>評価は次回の採点プロンプトに反映されます。</div>
+</footer>
+
+<!-- ========== 設定 ========== -->
+<div data-settings hidden>
+
+  <section class="set">
+    <h3 class="set-h">ジャンル</h3>
+
+    <details class="gset" open>
+      <summary><span class="gname">AI活用・海外</span><span class="gmeta mono">閾値 6 / ソース 12</span></summary>
+      <div class="gbody">
+        <label class="fl">表示名
+          <input class="inp" type="text" value="AI活用・海外">
+        </label>
+
+        <label class="fl">拾う基準
+          <textarea class="inp ta" rows="4">海外のAI実践者の発信のうち、どの使い方が商品になって売れそうかが読み取れるもの。ツール単体の新しさや技術解説だけのものは不要。</textarea>
+          <span class="hint">この文章がそのまま採点プロンプトに入ります。評価した良い例・悪い例が下に自動で追記されます。</span>
+        </label>
+
+        <div class="fl">
+          <div class="fl-top"><span>閾値</span><b class="mono" id="thVal">6</b></div>
+          <input class="rng" type="range" min="1" max="10" value="6" id="thRng">
+          <div class="scale mono"><span>1 ゆるい</span><span>10 厳しい</span></div>
+        </div>
+
+        <div class="fl">
+          <span class="fl-top"><span>ソース</span></span>
+          <div class="srcs">
+            <label class="sw-row"><input type="checkbox" checked><span>Nate Herk<i class="mono">YOUTUBE</i></span></label>
+            <label class="sw-row"><input type="checkbox" checked><span>Liam Ottley<i class="mono">SKOOL</i></span></label>
+            <label class="sw-row"><input type="checkbox" checked><span>Cole Medin<i class="mono">GITHUB</i></span></label>
+            <label class="sw-row"><input type="checkbox" checked><span>Nick Saraev<i class="mono">BLOG</i></span></label>
+            <label class="sw-row"><input type="checkbox"><span>Brendan Jowett<i class="mono">YOUTUBE</i></span></label>
+          </div>
+          <span class="hint">ソースの追加はリポジトリの sources.yaml から。ここでは割り当てと停止だけ。</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="gset">
+      <summary><span class="gname">自動化の実装</span><span class="gmeta mono">閾値 7 / ソース 8</span></summary>
+      <div class="gbody"><p class="hint">同じ項目が並びます。</p></div>
+    </details>
+
+    <details class="gset">
+      <summary><span class="gname">売り方・オファー</span><span class="gmeta mono">閾値 6 / ソース 6</span></summary>
+      <div class="gbody"><p class="hint">同じ項目が並びます。</p></div>
+    </details>
+
+    <button class="act add">＋ ジャンルを追加</button>
+  </section>
+
+  <section class="set">
+    <h3 class="set-h">実行</h3>
+    <div class="fl">
+      <span class="fl-top"><span>取得する時刻</span></span>
+      <div class="times">
+        <button class="chip" aria-pressed="true">07:00</button>
+        <button class="chip" aria-pressed="true">13:00</button>
+        <button class="chip" aria-pressed="true">21:00</button>
+        <button class="chip" aria-pressed="false">＋</button>
+      </div>
+      <span class="hint">JSTで指定。実行は数分ずれることがあります。</span>
+    </div>
+    <label class="sw-row"><input type="checkbox" checked><span>閾値より下も残す（折りたたんで表示）</span></label>
+    <label class="sw-row"><input type="checkbox"><span>新着があればTelegramに見出しを送る</span></label>
+  </section>
+
+  <section class="set">
+    <h3 class="set-h">学習</h3>
+    <dl class="stats mono">
+      <div><dt>評価済み</dt><dd>128</dd></div>
+      <div><dt>良い例</dt><dd>47</dd></div>
+      <div><dt>除外理由の内訳</dt><dd>既知 34 / 浅い 29 / 無関係 12 / ソース弱い 6</dd></div>
+      <div><dt>直近の一致率</dt><dd>74%</dd></div>
+    </dl>
+    <span class="hint">プロンプトには各ジャンルの直近20件（良い例・悪い例）が入ります。</span>
+  </section>
+
+  <div class="savebar">
+    <button class="save" id="saveBtn">保存</button>
+    <span class="hint" id="saveHint">保存すると次回の実行から反映されます。</span>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+// ruler ticks
+(function(){
+  var r = document.getElementById('ruler');
+  for (var i=0;i<=10;i++){
+    var t=document.createElement('div');
+    t.className='tick'+(i%2===0?' major':'');
+    t.style.left=(i*10)+'%';
+    if(i%2===0){var l=document.createElement('span');l.className='lab';l.textContent=i;t.appendChild(l);}
+    r.appendChild(t);
+  }
+  var c=document.createElement('div');c.className='cut';c.style.left='60%';r.appendChild(c);
+  var f=document.createElement('div');f.className='fill';f.style.right='40%';r.appendChild(f);
+})();
+
+var REASONS = ['既知','浅い','自分に無関係','ソースが弱い'];
+
+// threshold slider
+(function(){
+  var r=document.getElementById('thRng'), v=document.getElementById('thVal');
+  if(r) r.addEventListener('input',function(){v.textContent=r.value});
+})();
+
+document.addEventListener('click', function(e){
+  var btn = e.target.closest('button');
+  if(!btn) return;
+
+  // copy
+  if(btn.hasAttribute('data-copy')){
+    var item = btn.closest('.item');
+    var txt = item.querySelector('h2').textContent.trim()+'\n'+item.querySelector('.gist').textContent.trim();
+    navigator.clipboard && navigator.clipboard.writeText(txt);
+    var o = btn.textContent; btn.textContent='コピー済み'; btn.classList.add('copied');
+    setTimeout(function(){btn.textContent=o;btn.classList.remove('copied');},1400);
+    return;
+  }
+
+  // vote
+  if(btn.hasAttribute('data-vote')){
+    var v = btn.getAttribute('data-vote');
+    var acts = btn.closest('.acts');
+    var fb = btn.closest('div').parentNode.querySelector('.fb');
+    acts.querySelectorAll('[data-vote]').forEach(function(b){b.removeAttribute('data-on')});
+    btn.setAttribute('data-on', v);
+    if(v==='up'){
+      fb.innerHTML = '<div class="logged">記録しました — 良い例 47件目</div>';
+    } else {
+      var chips = REASONS.map(function(r){
+        return '<button class="chip" aria-pressed="false">'+r+'</button>';
+      }).join('');
+      fb.innerHTML = '<div class="why"><p>どこが違いましたか</p><div class="why-row">'+chips+'</div></div>';
+    }
+    return;
+  }
+
+  // reason chip
+  if(btn.classList.contains('chip')){
+    var row = btn.parentNode;
+    row.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed','false')});
+    btn.setAttribute('aria-pressed','true');
+    var why = btn.closest('.why');
+    setTimeout(function(){
+      why.outerHTML = '<div class="logged">記録しました — 「'+btn.textContent+'」として除外条件に追加</div>';
+    },260);
+    return;
+  }
+
+  // view switch
+  if(btn.classList.contains('sw')){
+    var view = btn.getAttribute('data-view');
+    document.querySelectorAll('.sw').forEach(function(b){
+      b.setAttribute('aria-selected', b===btn ? 'true':'false');
+    });
+    document.querySelectorAll('[data-feed]').forEach(function(el){el.hidden = (view!=='feed')});
+    document.querySelectorAll('[data-settings]').forEach(function(el){el.hidden = (view!=='settings')});
+    window.scrollTo(0,0);
+    return;
+  }
+
+  // save
+  if(btn.id === 'saveBtn'){
+    btn.textContent='保存しました'; btn.classList.add('done');
+    document.getElementById('saveHint').textContent='次の取得（13:00）から反映されます。';
+    setTimeout(function(){btn.textContent='保存';btn.classList.remove('done');},1600);
+    return;
+  }
+
+  // genre tabs
+  if(btn.classList.contains('genre')){
+    document.querySelectorAll('.genre').forEach(function(b){b.setAttribute('aria-selected','false')});
+    btn.setAttribute('aria-selected','true');
+  }
+});
+</script>
+</body>
+</html>
