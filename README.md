@@ -25,6 +25,8 @@ Workerは `feedback:{item_id}` に記事ごとの最新評価を保存し、`fee
 
 WorkerはGitHub Pages origin (`https://pochita09.github.io`) と限定したlocalhost開発originだけをCORS許可します。公開Pagesからの書込みを個人用に軽量に運用する設計であり、CORSはユーザー認証ではありません。より強い書込み保護が必要になった場合は、将来のPhaseでCloudflare AccessまたはTurnstileを導入してください。
 
+本番Worker URL: `https://information-monitor-feedback.takaline.workers.dev`
+
 ## ローカル実行
 
 Python 3.12 を推奨します。Geminiキーはコードへ書かず、`GEMINI_API_KEY` 環境変数で渡します。

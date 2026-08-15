@@ -1,6 +1,11 @@
 {
-  "name": "information-monitor-feedback",
-  "main": "src/index.js",
-  "compatibility_date": "2026-08-15",
-  "kv_namespaces": [{ "binding": "FEEDBACK", "id": "REPLACE_WITH_KV_NAMESPACE_ID" }]
+	"name": "information-monitor-feedback",
+	"main": "src/index.js",
+	"compatibility_date": "2026-08-15",
+	"kv_namespaces": [
+		{
+			"binding": "FEEDBACK",
+			"id": "6bc1180364934b229f4d5fe41f992301"
+		}
+	]
 }
