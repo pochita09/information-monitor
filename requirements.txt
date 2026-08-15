@@ -1,7 +1,5 @@
-feedparser
-google-genai
-gspread
-google-auth
-jinja2
-pyyaml
-python-dotenv
+feedparser>=6.0.11,<7
+google-genai>=1.62.0,<2
+jinja2>=3.1.6,<4
+pyyaml>=6.0.2,<7
+python-dotenv>=1.2.1,<2

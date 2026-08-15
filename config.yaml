@@ -3,7 +3,10 @@ ai:
   model: gemini-2.5-flash-lite
 
 themes:
-  - name: AIモデル系
+  - topic_id: ai-models
+    name: AIモデル系
+    display_name: AIモデル系
+    threshold: 6
     sheet_tab: AIモデル系
     sources:
       - name: OpenAI News

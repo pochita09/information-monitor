@@ -1,6 +1,7 @@
 .env
 service_account.json
-data/last_seen.json
+src/output/
+templates/email.html
 __pycache__/
 *.pyc
 .venv/

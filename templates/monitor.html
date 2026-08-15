@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>監視ログ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>{{ style_css | safe }}</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="masthead"><h1>監視ログ</h1><div class="switch"><button class="sw" data-view="feed" aria-selected="true">フィード</button><button class="sw" data-view="settings" aria-selected="false">設定</button></div></div>
+  <nav class="genres" role="tablist" aria-label="ジャンル" data-feed>
+  {% for topic in topics %}<button class="genre" role="tab" data-topic="{{ topic.topic_id }}" aria-selected="{{ 'true' if loop.first else 'false' }}">{{ topic.name }}<span class="n">{{ topic.above|length }}</span></button>{% endfor %}
+  </nav>
+</header>
+<section class="calib" aria-label="学習状況" data-feed>
+  <div class="calib-top"><span class="runline mono"><span class="dot"></span>{{ generated_at }} 最終更新 / Phase 1 ローカル</span><span>アーカイブ <b>{{ archive_count }}</b>件</span></div>
+  <div class="calib-top"><span>判断の学習 — <b>Phase 2以降で接続</b></span><span>評価は未接続</span></div><div class="ruler" id="ruler"></div>
+</section>
+{% for topic in topics %}
+<main class="list topic-list" data-feed data-topic-panel="{{ topic.topic_id }}" {% if not loop.first %}hidden{% endif %}>
+  {% for article in topic.above %}
+  <article class="item" data-item-id="{{ article.item_id }}"><div class="meter"><div class="bar"><div class="lvl" style="height:{{ article.score * 10 }}%"></div><div class="thr" style="bottom:{{ topic.threshold * 10 }}%"></div></div><span class="val mono">{{ article.score }}</span></div><div>
+    <div class="head mono"><span class="src">{{ article.source }}</span><span class="chan">{{ article.channel }}</span><span>{{ article.published_label }}</span></div>
+    <h2><a href="{{ article.url }}" target="_blank" rel="noopener noreferrer">{{ article.title }}</a></h2><p class="gist">{{ article.summary_ja }}</p>
+    <div class="keys mono">{% for tag in article.tags %}<span class="key">#{{ tag }}</span>{% endfor %}</div>
+    <div class="acts"><button class="act" data-vote="up">良い</button><button class="act" data-vote="down">違う</button><button class="act" data-copy>コピー</button></div><div class="fb"></div>
+  </div></article>
+  {% else %}<p class="hint">閾値以上の記事はまだありません。</p>{% endfor %}
+</main>
+<details class="fold topic-fold" data-feed data-topic-panel="{{ topic.topic_id }}" {% if not loop.first %}hidden{% endif %}><summary>閾値より下 — {{ topic.below|length }}件</summary><div class="list">
+  {% for article in topic.below %}<article class="item" data-item-id="{{ article.item_id }}"><div class="meter"><div class="bar"><div class="lvl low" style="height:{{ article.score * 10 }}%"></div><div class="thr" style="bottom:{{ topic.threshold * 10 }}%"></div></div><span class="val low mono">{{ article.score }}</span></div><div><div class="head mono"><span class="src">{{ article.source }}</span><span class="chan">{{ article.channel }}</span><span>{{ article.published_label }}</span></div><h2><a href="{{ article.url }}" target="_blank" rel="noopener noreferrer">{{ article.title }}</a></h2><p class="gist">{{ article.summary_ja }}</p><div class="keys mono">{% for tag in article.tags %}<span class="key">#{{ tag }}</span>{% endfor %}</div><div class="acts"><button class="act" data-vote="up">良い</button><button class="act" data-vote="down">違う</button><button class="act" data-copy>コピー</button></div><div class="fb"></div></div></article>{% endfor %}
+</div></details>
+{% endfor %}
+<footer data-feed><div>ローカル記事アーカイブから生成</div><div>評価・設定保存は Phase 1 では未接続です。</div></footer>
+<div data-settings hidden>
+  <section class="set"><h3 class="set-h">ジャンル</h3>{% for topic in topics %}<details class="gset" {% if loop.first %}open{% endif %}><summary><span class="gname">{{ topic.name }}</span><span class="gmeta mono">閾値 {{ topic.threshold }} / ソース {{ topic.sources|length }}</span></summary><div class="gbody"><label class="fl">表示名<input class="inp" type="text" value="{{ topic.name }}" disabled></label><label class="fl">拾う基準<textarea class="inp ta" rows="6" disabled>{{ topic.criteria }}</textarea><span class="hint">この文章は現在 config.yaml で管理されています。評価例・保存機能は Phase 2以降で接続します。</span></label><div class="fl"><div class="fl-top"><span>閾値</span><b class="mono">{{ topic.threshold }}</b></div><input class="rng" type="range" min="1" max="10" value="{{ topic.threshold }}" disabled><div class="scale mono"><span>1 ゆるい</span><span>10 厳しい</span></div></div><div class="fl"><span class="fl-top"><span>ソース</span></span>{% for source in topic.sources %}<label class="sw-row"><input type="checkbox" checked disabled><span>{{ source.name }}<i class="mono"> RSS</i></span></label>{% endfor %}</div></div></details>{% endfor %}</section>
+  <section class="set"><h3 class="set-h">実行</h3><span class="hint">GitHub Actions・実行時刻設定は Phase 2 で接続します。</span></section>
+  <section class="set"><h3 class="set-h">学習</h3><dl class="stats mono"><div><dt>評価済み</dt><dd>未接続</dd></div><div><dt>良い例</dt><dd>未接続</dd></div><div><dt>除外理由の内訳</dt><dd>未接続</dd></div><div><dt>直近の一致率</dt><dd>未接続</dd></div></dl></section>
+  <div class="savebar"><button class="save" id="saveBtn" disabled>保存（未接続）</button><span class="hint" id="saveHint">設定保存は Phase 2以降で接続します。</span></div>
+</div></div>
+<script>
+(function(){var r=document.getElementById('ruler');for(var i=0;i<=10;i++){var t=document.createElement('div');t.className='tick'+(i%2===0?' major':'');t.style.left=(i*10)+'%';if(i%2===0){var l=document.createElement('span');l.className='lab';l.textContent=i;t.appendChild(l)}r.appendChild(t)}})();
+document.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-copy')){var item=b.closest('.item'),text=item.querySelector('h2').textContent.trim()+'\n'+item.querySelector('.gist').textContent.trim();if(navigator.clipboard){navigator.clipboard.writeText(text)}var old=b.textContent;b.textContent='コピー済み';b.classList.add('copied');setTimeout(function(){b.textContent=old;b.classList.remove('copied')},1400);return}if(b.hasAttribute('data-vote')){b.closest('.acts').querySelectorAll('[data-vote]').forEach(function(x){x.removeAttribute('data-on')});b.setAttribute('data-on',b.getAttribute('data-vote'));b.closest('.item').querySelector('.fb').innerHTML='<div class="logged">Phase 1: 評価保存は未接続です</div>';return}if(b.classList.contains('sw')){var v=b.getAttribute('data-view');document.querySelectorAll('.sw').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});document.querySelectorAll('[data-feed]:not([data-topic-panel])').forEach(function(x){x.hidden=v!=='feed'});document.querySelectorAll('[data-settings]').forEach(function(x){x.hidden=v!=='settings'});if(v==='settings'){document.querySelectorAll('[data-topic-panel]').forEach(function(x){x.hidden=true})}else{var selected=document.querySelector('.genre[aria-selected="true"]');if(selected){var id=selected.getAttribute('data-topic');document.querySelectorAll('[data-topic-panel]').forEach(function(x){x.hidden=x.getAttribute('data-topic-panel')!==id})}}window.scrollTo(0,0);return}if(b.classList.contains('genre')){var id=b.getAttribute('data-topic');document.querySelectorAll('.genre').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});document.querySelectorAll('[data-topic-panel]').forEach(function(x){x.hidden=x.getAttribute('data-topic-panel')!==id})}});
+</script>
+</body></html>

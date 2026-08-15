@@ -15,12 +15,17 @@ def _build_prompt(articles: list[dict], filter_criteria: str) -> str:
         lines.append(
             f"[{i}]\n"
             f"タイトル: {a['title']}\n"
+            f"item_id: {a['item_id']}\n"
             f"URL: {a['url']}\n"
             f"概要: {summary}"
         )
     articles_text = "\n\n".join(lines)
 
     return f"""{filter_criteria}
+
+あなたは記事を1件も省略せず、すべて1〜10の整数で採点する情報キュレーターです。
+10 は基準に非常によく合い、1 はほとんど合いません。記事本文にない事実は補わないでください。
+要約は1〜2行の日本語、tags は内容を表す短い日本語または英字タグを最大5個にしてください。
 
 【記事リスト】
 {articles_text}
@@ -29,16 +34,14 @@ def _build_prompt(articles: list[dict], filter_criteria: str) -> str:
 JSON のみを返してください（説明文不要）:
 {{
   "results": [
-    {{"index": 1, "include": true, "category": "新モデル|新機能|価格改定|研究・論文|その他", "importance": "高|中|低", "summary": "1〜2行の日本語要約"}},
-    {{"index": 2, "include": false}}
+    {{"index": 1, "score": 8, "category": "新モデル|新機能|価格改定|研究・論文|その他", "importance": "高|中|低", "summary_ja": "1〜2行の日本語要約", "tags": ["タグ"]}}
   ]
 }}
-include が false の場合、category / importance / summary は省略可。
 """
 
 
 def filter_and_summarize(articles: list[dict], theme: dict, model_name: str) -> list[dict]:
-    """Gemini API で記事を選別・要約して返す。"""
+    """Gemini API で全記事を1〜10点採点して返す。不正な結果の単一記事は除外する。"""
     if not articles:
         return []
 
@@ -57,19 +60,39 @@ def filter_and_summarize(articles: list[dict], theme: dict, model_name: str) -> 
         print(f"    警告: AI応答のJSONパース失敗: {e}")
         return []
 
-    filtered = []
+    scored = []
     for item in data.get("results", []):
-        if not item.get("include", False):
+        if not isinstance(item, dict):
+            print("    警告: AI応答にオブジェクトではない結果が含まれています")
             continue
-        idx = item.get("index", 0) - 1
+        index = item.get("index")
+        if not isinstance(index, int):
+            print("    警告: AI応答の記事 index が不正です")
+            continue
+        idx = index - 1
         if not (0 <= idx < len(articles)):
+            print(f"    警告: AI応答の記事 index が範囲外です: {index}")
+            continue
+        score = item.get("score")
+        summary_ja = item.get("summary_ja")
+        tags = item.get("tags")
+        if isinstance(score, bool) or not isinstance(score, int) or not 1 <= score <= 10:
+            print(f"    警告: AI応答の記事 score が不正です: index={index}")
+            continue
+        if not isinstance(summary_ja, str) or not summary_ja.strip():
+            print(f"    警告: AI応答の記事 summary_ja が不正です: index={index}")
+            continue
+        if not isinstance(tags, list) or not all(isinstance(tag, str) and tag.strip() for tag in tags):
+            print(f"    警告: AI応答の記事 tags が不正です: index={index}")
             continue
         original = articles[idx]
-        filtered.append({
+        scored.append({
             **original,
             "category": item.get("category", "その他"),
             "importance": item.get("importance", "中"),
-            "summary_ja": item.get("summary", ""),
+            "score": score,
+            "summary_ja": summary_ja.strip(),
+            "tags": [tag.strip()[:40] for tag in tags[:5]],
+            "topic_id": theme["topic_id"],
         })
-
-    return filtered
+    return scored

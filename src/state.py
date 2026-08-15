@@ -18,20 +18,25 @@ def _load() -> dict:
         return {}
 
 
-def _save(state: dict) -> None:
-    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+def atomic_write_json(path: Path, data: object) -> None:
+    """Write JSON through a temporary file so a crash cannot corrupt state."""
+    path.parent.mkdir(parents=True, exist_ok=True)
     # 一時ファイルに書いてからアトミックにリネーム（書き込み中のクラッシュでファイルが壊れない）
-    fd, tmp_path = tempfile.mkstemp(dir=STATE_FILE.parent, suffix=".tmp")
+    fd, tmp_path = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(state, f, ensure_ascii=False, indent=2)
-        os.replace(tmp_path, STATE_FILE)
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp_path, path)
     except Exception:
         try:
             os.unlink(tmp_path)
         except OSError:
             pass
         raise
+
+
+def _save(state: dict) -> None:
+    atomic_write_json(STATE_FILE, state)
 
 
 def get_last_seen(feed_url: str) -> datetime | None:
