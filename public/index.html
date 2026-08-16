@@ -73,7 +73,7 @@ function structureFeedPanels(id){let host=staticFeedHost(id),chips=host&&host.qu
 rebuildSources=function(id){renderFeedPanels(id);structureFeedPanels(id)};
 document.querySelectorAll('[data-feed-selector]').forEach(host=>structureFeedPanels(host.dataset.feedSelector));
 </script>
-<style>.genre-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}.genre-chip{border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--text);padding:7px 12px;font:inherit;font-size:13px}.genre-chip[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}.genre-chip.add-genre{border-style:dashed;color:var(--blue)}.genre-add-form{display:grid;gap:9px;margin:0 0 16px;padding:12px;border:1px solid var(--line);border-radius:8px;background:#fbfcfe}.genre-add-actions{display:flex;gap:8px}.gset.genre-hidden{display:none}</style>
+<style>.genre-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}.genre-chip{border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--text);padding:7px 12px;font:inherit;font-size:13px}.genre-chip[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}.genre-chip.add-genre{border-style:dashed;color:var(--blue)}.genre-add-form{display:grid;gap:14px;margin:0;padding:0;border:0;border-radius:0;background:transparent}.genre-add-form .fl{margin:0}.genre-add-actions{display:none}.gset.genre-hidden{display:none}</style>
 <script>
 /* Genre settings are selected from one tag list; only one genre body is shown. */
 let selectedGenreId=null;
