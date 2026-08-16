@@ -1,81 +1,12 @@
-const ALLOWED_ORIGINS = new Set(["https://pochita09.github.io", "http://localhost:8787", "http://localhost:3000", "http://127.0.0.1:8787"]);
-const REASONS = new Set(["既知", "浅い", "自分に無関係", "ソースが弱い"]);
-const INDEX_KEY = "feedback:index", CONFIG_KEY = "config:global", INDEX_LIMIT = 500, MAX_BODY_BYTES = 16_384;
-const DEFAULT_CONFIG = { topics: { "ai-models": { display_name: "AIモデル系", criteria: "あなたはAI情報のキュレーターです。重要なAIモデル、新機能、API変更、価格改定、研究成果、業界に大きな影響を与えるニュースを優先してください。", threshold: 6, sources: { "openai-news": true, "deepmind-blog": true, "anthropic-news": true, "anthropic-research": true } } }, run: { times: ["07:13", "13:17", "21:23"], keep_below_threshold: true, telegram_enabled: false } };
-const KNOWN_TOPICS = new Set(Object.keys(DEFAULT_CONFIG.topics));
-const KNOWN_SOURCES = new Map(Object.entries(DEFAULT_CONFIG.topics).map(([id, topic]) => [id, new Set(Object.keys(topic.sources))]));
-
-function corsHeaders(origin) { return { "Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS", "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Max-Age": "86400", Vary: "Origin" }; }
-function json(data, status = 200, origin = null) { const headers = { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" }; if (origin && ALLOWED_ORIGINS.has(origin)) Object.assign(headers, corsHeaders(origin)); return new Response(JSON.stringify(data), { status, headers }); }
-function allowedOrigin(request) { const origin = request.headers.get("Origin"); return origin && ALLOWED_ORIGINS.has(origin) ? origin : null; }
-function requiredString(value, name, maxLength, errors) { if (typeof value !== "string" || !value.trim()) { errors.push(`${name} is required`); return ""; } const trimmed = value.trim(); if (trimmed.length > maxLength) errors.push(`${name} is too long`); return trimmed; }
-function cloneDefaultConfig() { return structuredClone(DEFAULT_CONFIG); }
-function validTime(value) { return typeof value === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(value); }
-
-function validateConfig(input) {
-  const errors = [];
-  if (!input || typeof input !== "object" || Array.isArray(input)) return { errors: ["JSON object is required"] };
-  const topics = input.topics, run = input.run;
-  if (!topics || typeof topics !== "object" || Array.isArray(topics)) errors.push("topics is required");
-  if (!run || typeof run !== "object" || Array.isArray(run)) errors.push("run is required");
-  const normalized = cloneDefaultConfig();
-  if (topics && typeof topics === "object" && !Array.isArray(topics)) {
-    for (const [topicId, value] of Object.entries(topics)) {
-      if (!KNOWN_TOPICS.has(topicId)) { errors.push(`unknown topic_id: ${topicId}`); continue; }
-      if (!value || typeof value !== "object" || Array.isArray(value)) { errors.push(`topic ${topicId} must be an object`); continue; }
-      const displayName = requiredString(value.display_name, `topics.${topicId}.display_name`, 80, errors);
-      const criteria = requiredString(value.criteria, `topics.${topicId}.criteria`, 4_000, errors);
-      const threshold = value.threshold;
-      if (!Number.isInteger(threshold) || threshold < 1 || threshold > 10) errors.push(`topics.${topicId}.threshold must be 1..10`);
-      if (!value.sources || typeof value.sources !== "object" || Array.isArray(value.sources)) errors.push(`topics.${topicId}.sources is required`);
-      const sources = {};
-      for (const [sourceId, enabled] of Object.entries(value.sources || {})) {
-        if (!KNOWN_SOURCES.get(topicId).has(sourceId)) { errors.push(`unknown source_id: ${sourceId}`); continue; }
-        if (typeof enabled !== "boolean") errors.push(`topics.${topicId}.sources.${sourceId} must be boolean`);
-        else sources[sourceId] = enabled;
-      }
-      for (const sourceId of KNOWN_SOURCES.get(topicId)) if (!(sourceId in sources)) errors.push(`topics.${topicId}.sources.${sourceId} is required`);
-      normalized.topics[topicId] = { display_name: displayName, criteria, threshold, sources };
-    }
-    for (const topicId of KNOWN_TOPICS) if (!(topicId in topics)) errors.push(`topics.${topicId} is required`);
-  }
-  if (run && typeof run === "object" && !Array.isArray(run)) {
-    if (!Array.isArray(run.times) || run.times.length < 1 || run.times.length > 12 || !run.times.every(validTime)) errors.push("run.times must contain 1..12 HH:MM values");
-    else normalized.run.times = [...new Set(run.times)].sort();
-    for (const key of ["keep_below_threshold", "telegram_enabled"]) {
-      if (typeof run[key] !== "boolean") errors.push(`run.${key} must be boolean`); else normalized.run[key] = run[key];
-    }
-  }
-  return errors.length ? { errors } : { config: normalized };
-}
-
-function validateFeedback(input) {
-  const errors = [];
-  if (!input || typeof input !== "object" || Array.isArray(input)) return { errors: ["JSON object is required"] };
-  const item_id = requiredString(input.item_id, "item_id", 64, errors); if (item_id && !/^[a-f0-9]{64}$/i.test(item_id)) errors.push("item_id is invalid");
-  const topic_id = requiredString(input.topic_id, "topic_id", 80, errors); if (topic_id && !/^[a-z0-9][a-z0-9-]*$/i.test(topic_id)) errors.push("topic_id is invalid");
-  const vote = input.vote; if (vote !== "up" && vote !== "down") errors.push("vote must be up or down");
-  if (vote === "down" && (typeof input.reason !== "string" || !REASONS.has(input.reason))) errors.push("reason is required and must be allowed for down vote"); if (vote === "up" && input.reason != null) errors.push("reason must be null for up vote");
-  const score = input.score; if (!Number.isInteger(score) || score < 1 || score > 10) errors.push("score must be an integer from 1 to 10");
-  const title = requiredString(input.title, "title", 300, errors), summary = requiredString(input.summary, "summary", 2_000, errors), source = requiredString(input.source, "source", 120, errors), url = requiredString(input.url, "url", 2_048, errors); try { if (url) new URL(url); } catch { errors.push("url is invalid"); }
-  return errors.length ? { errors } : { feedback: { item_id, topic_id, vote, reason: vote === "down" ? input.reason : null, score, title, summary, source, url } };
-}
-async function readJson(request) { const text = await request.text(); if (new TextEncoder().encode(text).length > MAX_BODY_BYTES) return { error: "request body is too large", status: 413 }; try { return { value: JSON.parse(text) }; } catch { return { error: "invalid JSON", status: 400 }; } }
-async function getIndex(kv) { const value = await kv.get(INDEX_KEY, "json"); return Array.isArray(value) ? value.filter((item) => typeof item === "string") : []; }
-async function saveFeedback(kv, feedback) { const record = { ...feedback, created_at: new Date().toISOString() }; await kv.put(`feedback:${record.item_id}`, JSON.stringify(record)); const index = await getIndex(kv); await kv.put(INDEX_KEY, JSON.stringify([record.item_id, ...index.filter((id) => id !== record.item_id)].slice(0, INDEX_LIMIT))); return record; }
-async function listFeedback(kv) { return (await Promise.all((await getIndex(kv)).map((id) => kv.get(`feedback:${id}`, "json")))).filter((value) => value && typeof value === "object"); }
-
-async function handle(request, env) {
-  const url = new URL(request.url), origin = allowedOrigin(request), isConfigGet = url.pathname === "/config" && request.method === "GET";
-  if (request.method === "OPTIONS") return origin ? new Response(null, { status: 204, headers: corsHeaders(origin) }) : json({ error: "origin is not allowed" }, 403);
-  if (!origin && !isConfigGet) return json({ error: "origin is not allowed" }, 403);
-  if (!env.FEEDBACK) return json({ error: "storage is not configured" }, 500, origin);
-  if (isConfigGet) return json({ config: (await env.FEEDBACK.get(CONFIG_KEY, "json")) || cloneDefaultConfig() }, 200, origin);
-  if (url.pathname === "/config" && request.method === "PUT") { if (!origin) return json({ error: "origin is not allowed" }, 403); const parsed = await readJson(request); if (parsed.error) return json({ error: parsed.error }, parsed.status, origin); const result = validateConfig(parsed.value); if (result.errors) return json({ error: "validation failed", details: result.errors }, 400, origin); await env.FEEDBACK.put(CONFIG_KEY, JSON.stringify(result.config)); return json({ config: result.config }, 200, origin); }
-  if (url.pathname === "/feedback" && request.method === "GET") return json({ feedback: await listFeedback(env.FEEDBACK) }, 200, origin);
-  if (url.pathname.startsWith("/feedback/") && request.method === "GET") { const id = decodeURIComponent(url.pathname.slice(10)); if (!/^[a-f0-9]{64}$/i.test(id)) return json({ error: "item_id is invalid" }, 400, origin); const feedback = await env.FEEDBACK.get(`feedback:${id}`, "json"); return feedback ? json({ feedback }, 200, origin) : json({ error: "feedback not found" }, 404, origin); }
-  if (url.pathname === "/feedback" && request.method === "POST") { const parsed = await readJson(request); if (parsed.error) return json({ error: parsed.error }, parsed.status, origin); const result = validateFeedback(parsed.value); return result.errors ? json({ error: "validation failed", details: result.errors }, 400, origin) : json({ feedback: await saveFeedback(env.FEEDBACK, result.feedback) }, 200, origin); }
-  return json({ error: "method or path is not allowed" }, 405, origin);
-}
-export default { fetch: (request, env) => handle(request, env) };
-export { handle, validateFeedback, validateConfig, DEFAULT_CONFIG };
+const ALLOWED_ORIGINS=new Set(["https://pochita09.github.io","http://localhost:8787","http://127.0.0.1:8787","http://localhost:3000"]),REASONS=new Set(["既知","浅い","自分に無関係","ソースが弱い"]),INDEX_KEY="feedback:index",CONFIG_KEY="config:global",MAX_BODY_BYTES=32_768;
+const STANDARD={"openai-news":{name:"OpenAI News",url:"https://openai.com/news/rss.xml"},"deepmind-blog":{name:"Google DeepMind Blog",url:"https://deepmind.google/blog/rss.xml"},"anthropic-news":{name:"Anthropic News",url:"https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml"},"anthropic-research":{name:"Anthropic Research",url:"https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml"}};
+const DEFAULT_CONFIG={topics:{"ai-models":{display_name:"AIモデル系",criteria:"あなたはAI情報のキュレーターです。重要なAIモデル、新機能、API変更、価格改定、研究成果、業界に大きな影響を与えるニュースを優先してください。",threshold:6,sources:Object.fromEntries(Object.entries(STANDARD).map(([id,s])=>[id,{...s,enabled:true,user_added:false}]))}},run:{times:["07:13","13:17","21:23"],keep_below_threshold:true,read_dim_enabled:true,telegram_enabled:false}};
+const clone=()=>structuredClone(DEFAULT_CONFIG),validTime=x=>typeof x==="string"&&/^([01]\d|2[0-3]):[0-5]\d$/.test(x),origin=r=>{let x=r.headers.get("Origin");return x&&ALLOWED_ORIGINS.has(x)?x:null},cors=o=>({"Access-Control-Allow-Origin":o,"Access-Control-Allow-Methods":"GET, POST, PUT, OPTIONS","Access-Control-Allow-Headers":"Content-Type","Access-Control-Max-Age":"86400",Vary:"Origin"}),json=(x,s=200,o=null)=>new Response(JSON.stringify(x),{status:s,headers:{"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store",...(o?cors(o):{})}});
+function text(v,n,max,e){if(typeof v!=="string"||!v.trim()){e.push(n+" is required");return""}v=v.trim();if(v.length>max)e.push(n+" is too long");return v}function validUrl(v){try{let u=new URL(v);return u.protocol==="https:"||u.protocol==="http:"}catch{return false}}function sourceId(url){let h=2166136261;for(let i=0;i<url.length;i++)h=Math.imul(h^url.charCodeAt(i),16777619);return"user-"+(h>>>0).toString(36)}
+function normalizeSource(id,value,errors){let standard=STANDARD[id];if(typeof value==="boolean"&&standard)return {...standard,enabled:value,user_added:false};if(!value||typeof value!=="object"||Array.isArray(value)){errors.push("invalid source "+id);return null}let name=text(value.name,"source name",120,errors),url=text(value.url,"source url",2048,errors);if(!validUrl(url))errors.push("source url is invalid");if(typeof value.enabled!=="boolean")errors.push("source enabled must be boolean");if(standard&&(name!==standard.name||url!==standard.url))errors.push("standard source cannot be changed");if(!standard&&(!/^user-[a-z0-9]+$/.test(id)||value.user_added!==true))errors.push("unknown source_id: "+id);return {name,url,enabled:!!value.enabled,user_added:!standard}}
+function validateConfig(input){let e=[];if(!input||typeof input!=="object"||Array.isArray(input))return{errors:["JSON object is required"]};let out=clone(),topics=input.topics,run=input.run;if(!topics||typeof topics!=="object")e.push("topics is required");for(let id of Object.keys(out.topics)){let value=topics&&topics[id];if(!value||typeof value!=="object"){e.push("topic "+id+" is required");continue}let t=out.topics[id],name=text(value.display_name,"display_name",80,e),criteria=text(value.criteria,"criteria",4000,e);if(name)t.display_name=name;if(criteria)t.criteria=criteria;if(!Number.isInteger(value.threshold)||value.threshold<1||value.threshold>10)e.push("threshold must be 1..10");else t.threshold=value.threshold;if(!value.sources||typeof value.sources!=="object")e.push("sources is required");else{t.sources={};for(let [sid,s] of Object.entries(value.sources)){let n=normalizeSource(sid,s,e);if(n)t.sources[sid]=n}for(let sid of Object.keys(STANDARD))if(!t.sources[sid])e.push("standard source is required: "+sid)}}if(!run||typeof run!=="object")e.push("run is required");else{if(!Array.isArray(run.times)||run.times.length<1||run.times.length>12||!run.times.every(validTime))e.push("run.times must contain 1..12 HH:MM values");else out.run.times=[...new Set(run.times)].sort();for(let key of["keep_below_threshold","read_dim_enabled"]){if(typeof run[key]!=="boolean")e.push("run."+key+" must be boolean");else out.run[key]=run[key]}if(typeof run.telegram_enabled==="boolean")out.run.telegram_enabled=run.telegram_enabled}return e.length?{errors:e}:{config:out}}
+function validateFeedback(x){let e=[],item_id=text(x?.item_id,"item_id",64,e),topic_id=text(x?.topic_id,"topic_id",80,e),vote=x?.vote;if(!/^[a-f0-9]{64}$/i.test(item_id))e.push("item_id is invalid");if(vote!=="up"&&vote!=="down")e.push("vote must be up or down");if(vote==="down"&&!REASONS.has(x.reason))e.push("reason is required");for(let [k,max]of[["title",300],["summary",2000],["source",120],["url",2048]])text(x?.[k],k,max,e);if(!validUrl(x?.url))e.push("url is invalid");return e.length?{errors:e}:{feedback:{item_id,topic_id,vote,reason:vote==="down"?x.reason:null,score:x.score,title:x.title.trim(),summary:x.summary.trim(),source:x.source.trim(),url:x.url.trim()}}}
+async function body(r){let x=await r.text();if(new TextEncoder().encode(x).length>MAX_BODY_BYTES)return{error:"request body is too large",status:413};try{return{value:JSON.parse(x)}}catch{return{error:"invalid JSON",status:400}}}async function index(kv){let x=await kv.get(INDEX_KEY,"json");return Array.isArray(x)?x:[]}async function list(kv){return(await Promise.all((await index(kv)).map(id=>kv.get("feedback:"+id,"json")))).filter(Boolean)}async function save(kv,f){let r={...f,created_at:new Date().toISOString()},ids=await index(kv);await kv.put("feedback:"+r.item_id,JSON.stringify(r));await kv.put(INDEX_KEY,JSON.stringify([r.item_id,...ids.filter(x=>x!==r.item_id)].slice(0,500)));return r}
+async function validateFeed(url){let response=await fetch(url,{headers:{Accept:"application/rss+xml, application/atom+xml, application/xml, text/xml"}});if(!response.ok)throw Error("fetch failed");let xml=await response.text();if(xml.length>1_000_000)throw Error("feed is too large");let doc=new DOMParser().parseFromString(xml,"application/xml");if(doc.querySelector("parsererror"))throw Error("invalid XML");let root=doc.documentElement?.localName?.toLowerCase(),entry=doc.querySelector("item, entry"),title=doc.querySelector("channel > title, feed > title, title")?.textContent?.trim(),link=entry?.querySelector("link")?.getAttribute("href")||entry?.querySelector("link")?.textContent?.trim();if(!["rss","feed","rdf"].includes(root)||!title||!link)throw Error("not a usable feed");return{title:title.slice(0,120),url}}
+async function handle(r,env){let u=new URL(r.url),o=origin(r),configGet=u.pathname==="/config"&&r.method==="GET";if(r.method==="OPTIONS")return o?new Response(null,{status:204,headers:cors(o)}):json({error:"origin is not allowed"},403);if(!o&&!configGet)return json({error:"origin is not allowed"},403);if(!env.FEEDBACK)return json({error:"storage is not configured"},500,o);if(configGet)return json({config:(await env.FEEDBACK.get(CONFIG_KEY,"json"))||clone()},200,o);if(u.pathname==="/feeds/validate"&&r.method==="POST"){let p=await body(r);if(p.error)return json({error:p.error},p.status,o);let url=text(p.value?.url,"url",2048,[]);if(!validUrl(url))return json({error:"RSS / Atomフィードとして確認できませんでした"},400,o);try{let feed=await validateFeed(url),name=typeof p.value.name==="string"&&p.value.name.trim()?p.value.name.trim().slice(0,120):feed.title;return json({source:{source_id:sourceId(feed.url),name,url:feed.url,enabled:true,user_added:true}},200,o)}catch{return json({error:"RSS / Atomフィードとして確認できませんでした"},400,o)}}if(u.pathname==="/config"&&r.method==="PUT"){let p=await body(r);if(p.error)return json({error:p.error},p.status,o);let v=validateConfig(p.value);if(v.errors)return json({error:"validation failed",details:v.errors},400,o);await env.FEEDBACK.put(CONFIG_KEY,JSON.stringify(v.config));return json({config:v.config},200,o)}if(u.pathname==="/feedback"&&r.method==="GET")return json({feedback:await list(env.FEEDBACK)},200,o);if(u.pathname.startsWith("/feedback/")&&r.method==="GET"){let f=await env.FEEDBACK.get("feedback:"+u.pathname.slice(10),"json");return f?json({feedback:f},200,o):json({error:"feedback not found"},404,o)}if(u.pathname==="/feedback"&&r.method==="POST"){let p=await body(r);if(p.error)return json({error:p.error},p.status,o);let v=validateFeedback(p.value);return v.errors?json({error:"validation failed",details:v.errors},400,o):json({feedback:await save(env.FEEDBACK,v.feedback)},200,o)}return json({error:"method or path is not allowed"},405,o)}
+export default{fetch:handle};export{handle,validateConfig,validateFeedback,DEFAULT_CONFIG};

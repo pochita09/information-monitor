@@ -9,7 +9,7 @@ config_api_url: "https://information-monitor-feedback.takaline.workers.dev"
 run:
   times: ["07:13", "13:17", "21:23"]
   keep_below_threshold: true
-  telegram_enabled: false
+  read_dim_enabled: true
 
 themes:
   - topic_id: ai-models

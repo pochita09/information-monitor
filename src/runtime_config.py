@@ -14,14 +14,20 @@ def settings_payload(config: dict) -> dict:
                 "display_name": theme.get("display_name", theme["name"]),
                 "criteria": theme.get("filter_prompt", ""),
                 "threshold": int(theme.get("threshold", 6)),
-                "sources": {source["source_id"]: bool(source.get("enabled", True)) for source in theme.get("sources", [])},
+                "sources": {
+                    source["source_id"]: {
+                        "name": source["name"], "url": source["url"],
+                        "enabled": bool(source.get("enabled", True)), "user_added": bool(source.get("user_added", False)),
+                    }
+                    for source in theme.get("sources", [])
+                },
             }
             for theme in config.get("themes", [])
         },
         "run": {
             "times": list(config.get("run", {}).get("times", [])),
             "keep_below_threshold": bool(config.get("run", {}).get("keep_below_threshold", True)),
-            "telegram_enabled": bool(config.get("run", {}).get("telegram_enabled", False)),
+            "read_dim_enabled": bool(config.get("run", {}).get("read_dim_enabled", True)),
         },
     }
 
@@ -49,16 +55,22 @@ def apply_settings(default_config: dict, settings: object) -> dict:
             if isinstance(threshold, int) and not isinstance(threshold, bool) and 1 <= threshold <= 10:
                 theme["threshold"] = threshold
             if isinstance(sources, dict):
+                standard_ids = {source.get("source_id") for source in theme.get("sources", [])}
                 for source in theme.get("sources", []):
-                    enabled = sources.get(source.get("source_id"))
-                    if isinstance(enabled, bool):
-                        source["enabled"] = enabled
+                    saved_source = sources.get(source.get("source_id"))
+                    enabled = saved_source.get("enabled") if isinstance(saved_source, dict) else saved_source
+                    if isinstance(enabled, bool): source["enabled"] = enabled
+                for source_id, saved_source in sources.items():
+                    if source_id in standard_ids or not isinstance(saved_source, dict): continue
+                    if (saved_source.get("user_added") is True and isinstance(saved_source.get("name"), str)
+                            and isinstance(saved_source.get("url"), str) and isinstance(saved_source.get("enabled"), bool)):
+                        theme.setdefault("sources", []).append({"source_id": source_id, "name": saved_source["name"], "url": saved_source["url"], "enabled": saved_source["enabled"], "user_added": True})
     run = settings.get("run")
     if isinstance(run, dict):
         times = run.get("times")
         if isinstance(times, list) and 1 <= len(times) <= 12 and all(_valid_time(value) for value in times):
             config.setdefault("run", {})["times"] = sorted(set(times))
-        for key in ("keep_below_threshold", "telegram_enabled"):
+        for key in ("keep_below_threshold", "read_dim_enabled"):
             if isinstance(run.get(key), bool):
                 config.setdefault("run", {})[key] = run[key]
     return config
