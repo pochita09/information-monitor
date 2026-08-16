@@ -84,4 +84,5 @@ document.addEventListener('click',e=>{let b=e.target.closest('button[data-remove
 const showFeedRegistrationWithCancel=showFeedRegistration;
 showFeedRegistration=function(id){showFeedRegistrationWithCancel(id);let form=staticFeedHost(id)?.querySelector('[data-feed-form]'),cancel=form?.querySelector('[data-cancel-feed]');if(cancel){cancel.removeAttribute('data-cancel-feed');cancel.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();form.remove()})}};
 </script>
+<script>new MutationObserver(()=>document.querySelectorAll('[data-feed-form] [data-cancel-feed]').forEach(cancel=>{cancel.removeAttribute('data-cancel-feed');cancel.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();cancel.closest('[data-feed-form]')?.remove()},{once:true})})).observe(document.body,{childList:true,subtree:true});</script>
 </body></html>
