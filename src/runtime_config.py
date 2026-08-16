@@ -55,16 +55,16 @@ def apply_settings(default_config: dict, settings: object) -> dict:
             if isinstance(threshold, int) and not isinstance(threshold, bool) and 1 <= threshold <= 10:
                 theme["threshold"] = threshold
             if isinstance(sources, dict):
-                standard_ids = {source.get("source_id") for source in theme.get("sources", [])}
-                for source in theme.get("sources", []):
-                    saved_source = sources.get(source.get("source_id"))
-                    enabled = saved_source.get("enabled") if isinstance(saved_source, dict) else saved_source
-                    if isinstance(enabled, bool): source["enabled"] = enabled
+                defaults_by_id = {source.get("source_id"): source for source in theme.get("sources", [])}
+                restored = []
                 for source_id, saved_source in sources.items():
-                    if source_id in standard_ids or not isinstance(saved_source, dict): continue
-                    if (saved_source.get("user_added") is True and isinstance(saved_source.get("name"), str)
-                            and isinstance(saved_source.get("url"), str) and isinstance(saved_source.get("enabled"), bool)):
-                        theme.setdefault("sources", []).append({"source_id": source_id, "name": saved_source["name"], "url": saved_source["url"], "enabled": saved_source["enabled"], "user_added": True})
+                    if isinstance(saved_source, bool) and source_id in defaults_by_id:
+                        source = copy.deepcopy(defaults_by_id[source_id])
+                        source["enabled"] = saved_source
+                        restored.append(source)
+                    elif isinstance(saved_source, dict) and isinstance(saved_source.get("name"), str) and isinstance(saved_source.get("url"), str) and isinstance(saved_source.get("enabled"), bool):
+                        restored.append({"source_id": source_id, "name": saved_source["name"], "url": saved_source["url"], "enabled": saved_source["enabled"], "user_added": bool(saved_source.get("user_added", False))})
+                theme["sources"] = restored
     run = settings.get("run")
     if isinstance(run, dict):
         times = run.get("times")
