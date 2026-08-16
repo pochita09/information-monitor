@@ -46,7 +46,7 @@ document.querySelector('#telegramEnabled').closest('.sw-row').remove();let readR
 <script>
 collect=function(){Object.entries(cfg.topics).forEach(([id,t])=>{t.display_name=document.querySelector('[data-config-display-name="'+id+'"]').value.trim();t.criteria=document.querySelector('[data-config-criteria="'+id+'"]').value.trim();t.threshold=Number(document.querySelector('[data-config-threshold="'+id+'"]').value);Object.keys(t.sources).forEach(s=>t.sources[s].enabled=document.querySelector('[data-config-topic="'+id+'"][data-config-source="'+s+'"]').checked)});cfg.run.keep_below_threshold=document.querySelector('#keepBelow').checked;cfg.run.read_dim_enabled=document.querySelector('#readDim').checked;return cfg};
 </script>
-<style>.item.is-read{opacity:.62;background:#f8fafc}.item.is-read .title a,.item.is-read .summary,.item.is-read .meta{color:#64748b}.srcs small{font-size:11px;color:#64748b;overflow-wrap:anywhere}</style>
+<style>.item.is-read .title a{color:#64748b}.item.is-read .summary{color:#64748b}.srcs small{font-size:11px;color:#64748b;overflow-wrap:anywhere}</style>
 <script>
 populate=function(c){cfg=c;Object.entries(c.topics).forEach(([id,t])=>{document.querySelector('[data-config-display-name="'+id+'"]').value=t.display_name;document.querySelector('[data-config-criteria="'+id+'"]').value=t.criteria;let range=document.querySelector('[data-config-threshold="'+id+'"]');if(range){range.value=t.threshold;document.querySelector('[data-config-threshold-label="'+id+'"]').textContent=t.threshold}rebuildSources(id)});document.querySelector('#keepBelow').checked=c.run.keep_below_threshold;document.querySelector('#readDim').checked=c.run.read_dim_enabled!==false;renderTimes();paintRead()};
 </script>
