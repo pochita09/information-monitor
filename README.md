@@ -2,7 +2,7 @@
 
 RSS / Atom の新着記事を Gemini で採点・要約し、静的な Monitor 画面を GitHub Pages へ公開する個人用ツールです。
 
-## できること（Phase 3）
+## できること（Phase 4）
 
 - RSS / Atom の取得、新着判定、安定した記事IDによる重複防止
 - Gemini による 1〜10 の採点、日本語要約、タグ生成
@@ -10,8 +10,9 @@ RSS / Atom の新着記事を Gemini で採点・要約し、静的な Monitor �
 - 閾値以上と未満を分けた Monitor HTML の生成
 - GitHub Actions による定期実行、状態のcommit、GitHub Pages公開
 - Cloudflare Worker / KV による「良い」「違う」と除外理由の保存・復元
+- 設定画面からの採点基準・閾値・ソースON/OFF・実行時刻設定の保存
 
-設定保存、評価のGemini採点への反映、Telegramはまだ実装していません。
+評価のGemini採点へのフィードバック学習反映とTelegram送信はまだ実装していません。
 
 ## 評価API（Phase 3）
 
@@ -59,13 +60,7 @@ Actionsログは **Actions → Update Monitor → 対象の実行 → build / de
 
 ## 定期実行
 
-GitHub ActionsのcronはUTC指定です。以下の日本時間（JST）で実行します。
-
-| JST | UTC cron |
-| --- | --- |
-| 07:13 | `13 22 * * *`（前日UTC） |
-| 13:17 | `17 4 * * *` |
-| 21:23 | `23 12 * * *` |
+GitHub Actionsは5分ごとに起動し、Cloudflare KVに保存したJST時刻の直後（最大12分の遅延許容）だけ収集処理を実行します。これにより、設定画面で任意の`HH:MM`時刻を保存してもworkflow YAMLを書き換えずに反映できます。手動実行は時刻にかかわらず処理します。
 
 GitHub Actionsのscheduleは厳密な時刻実行ではなく、GitHubの混雑により数分以上遅延することがあります。
 

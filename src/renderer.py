@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from runtime_config import settings_payload
 
 
 ROOT = Path(__file__).parent.parent
@@ -50,6 +51,7 @@ def render_monitor(articles: list[dict], config: dict, fetched_count: int, saved
             "criteria": theme.get("filter_prompt", ""),
             "threshold": threshold,
             "sources": theme.get("sources", []),
+            "keep_below_threshold": bool(config.get("run", {}).get("keep_below_threshold", True)),
             "above": [article for article in topic_articles if article.get("score", 0) >= threshold],
             "below": [article for article in topic_articles if article.get("score", 0) < threshold],
         })
@@ -70,6 +72,8 @@ def render_monitor(articles: list[dict], config: dict, fetched_count: int, saved
             generated_at=_display_time(archive_updated_at) if archive_updated_at else "記事はまだありません",
             archive_count=len(articles),
             feedback_api_url=config.get("feedback_api_url", ""),
+            config_api_url=config.get("config_api_url", ""),
+            settings_config=settings_payload(config),
         ),
         encoding="utf-8",
     )

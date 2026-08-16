@@ -4,6 +4,12 @@ ai:
 
 # Phase 3: Workerをdeployした後にworkers.dev URLを設定する（秘密情報ではない）。
 feedback_api_url: "https://information-monitor-feedback.takaline.workers.dev"
+config_api_url: "https://information-monitor-feedback.takaline.workers.dev"
+
+run:
+  times: ["07:13", "13:17", "21:23"]
+  keep_below_threshold: true
+  telegram_enabled: false
 
 themes:
   - topic_id: ai-models
@@ -13,12 +19,16 @@ themes:
     sheet_tab: AIモデル系
     sources:
       - name: OpenAI News
+        source_id: openai-news
         url: https://openai.com/news/rss.xml
       - name: Google DeepMind Blog
+        source_id: deepmind-blog
         url: https://deepmind.google/blog/rss.xml
       - name: Anthropic News
+        source_id: anthropic-news
         url: https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml
       - name: Anthropic Research
+        source_id: anthropic-research
         url: https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml
     filter_prompt: |
       あなたはAI情報のキュレーターです。以下の記事リストを読み、重要なものだけを選別してください。

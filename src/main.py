@@ -1,4 +1,5 @@
 import sys
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -15,18 +16,27 @@ from ai_filter import filter_and_summarize
 from fetcher import fetch_feed
 from archive import load_articles, save_articles
 from renderer import render_monitor
+from runtime_config import apply_settings, fetch_settings
 from state import get_last_seen, update_last_seen, update_many
+from schedule import complete_slot, due_slot
 
 MAX_ARTICLES_PER_CALL = 100  # 1回の実行でAIに渡す記事数の上限
 
 
 def load_config() -> dict:
     with open(ROOT / "config.yaml", "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        defaults = yaml.safe_load(f)
+    return apply_settings(defaults, fetch_settings(defaults.get("config_api_url", "")))
 
 
 def main() -> None:
     config = load_config()
+    scheduled_slot = None
+    if os.environ.get("MONITOR_SCHEDULED") == "1":
+        scheduled_slot = due_slot(config.get("run", {}).get("times", []))
+        if not scheduled_slot:
+            print("指定時刻ではないため、今回の定期実行はスキップします")
+            return
     model_name = config["ai"]["model"]
     archive = load_articles()
     archived_ids = {article["item_id"] for article in archive}
@@ -39,6 +49,9 @@ def main() -> None:
         all_new_articles = []
 
         for source in theme["sources"]:
+            if not source.get("enabled", True):
+                print(f"  [{source['name']}] 設定により無効化されています")
+                continue
             last_seen = get_last_seen(source["url"])
             is_first_run = last_seen is None
 
@@ -124,6 +137,8 @@ def main() -> None:
         return
     print(f"  状態更新: {len(state_changes)}ソース")
     print(f"  HTML生成: {output}")
+    if scheduled_slot:
+        complete_slot(scheduled_slot)
     print(f"\n完了: 保存 {len(saved_articles)}件 / HTML: {output}")
 
 
