@@ -87,6 +87,11 @@ showFeedRegistration=function(id){showFeedRegistrationWithCancel(id);let form=st
 <script>new MutationObserver(()=>document.querySelectorAll('[data-feed-form] [data-cancel-feed]').forEach(cancel=>{cancel.removeAttribute('data-cancel-feed');cancel.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();cancel.closest('[data-feed-form]')?.remove()},{once:true})})).observe(document.body,{childList:true,subtree:true});</script>
 </body></html>
 <script>
+const renderSourceTerms=rebuildSources,showUnifiedGenreDraft=showGenreAddForm;
+rebuildSources=function(id){renderSourceTerms(id);let host=staticFeedHost(id);host?.querySelector('.add-feed')&&(host.querySelector('.add-feed').textContent='＋ ソースを追加')};
+showGenreAddForm=function(){showUnifiedGenreDraft();let form=document.querySelector('[data-genre-add-form]');if(!form||form.dataset.unified)return;form.dataset.unified='';let fields=form.querySelectorAll('.fl-top');if(fields[0])fields[0].textContent='表示名';let topic=cfg.topics[genreIdFrom(document.querySelector('.settings .gset'))],extra=document.createElement('div');extra.className='genre-draft-settings';extra.innerHTML='<div class="fl"><div class="fl-top"><span>閾値</span><b>'+topic.threshold+'</b></div><input class="rng" type="range" min="1" max="10" value="'+topic.threshold+'" disabled></div><div class="fl"><span class="fl-top">ソース</span><div class="feed-chips">'+Object.values(topic.sources).map(s=>'<span class="feed-tag">'+s.name+'</span>').join('')+'</div></div>';form.append(extra)};
+</script>
+<script>
 const showGenreDraft=showGenreAddForm,collectGenreDraft=collect;
 showGenreAddForm=function(){showGenreDraft();document.querySelector('[data-genre-add-form] .genre-add-actions')?.remove()};
 collect=function(){let form=document.querySelector('[data-genre-add-form]');if(form){let name=form.querySelector('[data-new-genre-name]').value.trim(),criteria=form.querySelector('[data-new-genre-criteria]').value.trim();if(name&&criteria)createGenre();else form.querySelector('.hint').textContent='ジャンル名と拾う基準を入力してから保存してください。'}return collectGenreDraft()};
