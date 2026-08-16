@@ -100,4 +100,8 @@ document.addEventListener('click',e=>{let b=e.target.closest('button[data-remove
 <style>.gset:not(:has([data-config-display-name="ai-models"])) .gbody>label.fl:nth-of-type(1),.gset:not(:has([data-config-display-name="ai-models"])) .gbody>label.fl:nth-of-type(2){display:none}</style>
 <style>.source-removal-label,.feed-panel-heading{display:none!important}</style>
 <script>function renameSettingsLabels(){let heading=document.querySelector('[data-settings] .set .set-h');if(heading)heading.textContent='フィード';document.querySelectorAll('[data-settings] .fl-top').forEach(label=>{if(label.textContent.trim()==='ソース'){label.textContent='削除';label.classList.add('source-removal-label')}});document.querySelectorAll('.feed-panel-heading span,.feed-section-label').forEach(label=>{if(label.textContent.trim()==='フィード')label.textContent='ソース'});document.querySelectorAll('.genre-chip.add-genre').forEach(button=>button.textContent='＋ フィード追加')}renameSettingsLabels();</script>
+<script>
+const showFeedRegistrationWithCancel=showFeedRegistration;
+showFeedRegistration=function(id){showFeedRegistrationWithCancel(id);let form=staticFeedHost(id)?.querySelector('[data-feed-form]'),cancel=form?.querySelector('[data-cancel-feed]');if(cancel)cancel.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();form.remove()})};
+</script>
 </body></html>
