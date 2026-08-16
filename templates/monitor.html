@@ -86,3 +86,8 @@ showFeedRegistration=function(id){showFeedRegistrationWithCancel(id);let form=st
 </script>
 <script>new MutationObserver(()=>document.querySelectorAll('[data-feed-form] [data-cancel-feed]').forEach(cancel=>{cancel.removeAttribute('data-cancel-feed');cancel.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();cancel.closest('[data-feed-form]')?.remove()},{once:true})})).observe(document.body,{childList:true,subtree:true});</script>
 </body></html>
+<script>
+const showGenreDraft=showGenreAddForm,collectGenreDraft=collect;
+showGenreAddForm=function(){showGenreDraft();document.querySelector('[data-genre-add-form] .genre-add-actions')?.remove()};
+collect=function(){let form=document.querySelector('[data-genre-add-form]');if(form){let name=form.querySelector('[data-new-genre-name]').value.trim(),criteria=form.querySelector('[data-new-genre-criteria]').value.trim();if(name&&criteria)createGenre();else form.querySelector('.hint').textContent='ジャンル名と拾う基準を入力してから保存してください。'}return collectGenreDraft()};
+</script>
