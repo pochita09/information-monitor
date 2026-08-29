@@ -1,13 +1,14 @@
 ai:
   provider: gemini
-  model: gemini-2.5-flash-lite
+  # gemini-2.5-flash-lite は新しいAPIキーでは 404 になるため移行先を指定する。
+  model: gemini-3.5-flash-lite
 
 # Phase 3: Workerをdeployした後にworkers.dev URLを設定する（秘密情報ではない）。
 feedback_api_url: "https://information-monitor-feedback.takaline.workers.dev"
 config_api_url: "https://information-monitor-feedback.takaline.workers.dev"
 
 run:
-  times: ["07:13", "13:17", "21:23"]
+  # 実行時刻は .github/workflows/monitor.yml の cron が正。
   keep_below_threshold: true
   read_dim_enabled: true
 

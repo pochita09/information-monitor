@@ -2,8 +2,8 @@ name: Update Monitor
 
 on:
   schedule:
-    # User-selected JST times are checked in Python; GitHub cron itself stays stable.
-    - cron: "*/5 * * * *"
+    # JST 13:00 / 21:00 / 翌07:00。GitHubのcron遅延をそのまま許容し、起動したら必ず処理する。
+    - cron: "0 4,12,22 * * *"
   workflow_dispatch:
 
 # A run must finish state persistence before the next run starts.
@@ -37,12 +37,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONUTF8: "1"
-          MONITOR_SCHEDULED: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: python src/main.py
 
       - name: Commit changed state and generated Monitor
         run: |
-          if git diff --quiet -- data/last_seen.json data/articles.json data/schedule_state.json public; then
+          if git diff --quiet -- data/last_seen.json data/articles.json public; then
             echo "state_changed=false" >> "$GITHUB_ENV"
             echo "No state or public output changes; no commit created."
           else

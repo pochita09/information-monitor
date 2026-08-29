@@ -5,6 +5,8 @@ import json
 import urllib.error
 import urllib.request
 
+USER_AGENT = "InformationMonitor/1.0 (+https://github.com/pochita09/information-monitor)"
+
 
 def settings_payload(config: dict) -> dict:
     """Build the browser/Worker config shape from repository-owned defaults."""
@@ -25,15 +27,10 @@ def settings_payload(config: dict) -> dict:
             for theme in config.get("themes", [])
         },
         "run": {
-            "times": list(config.get("run", {}).get("times", [])),
             "keep_below_threshold": bool(config.get("run", {}).get("keep_below_threshold", True)),
             "read_dim_enabled": bool(config.get("run", {}).get("read_dim_enabled", True)),
         },
     }
-
-
-def _valid_time(value: object) -> bool:
-    return isinstance(value, str) and len(value) == 5 and value[2] == ":" and value[:2].isdigit() and value[3:].isdigit() and 0 <= int(value[:2]) <= 23 and 0 <= int(value[3:]) <= 59
 
 
 def apply_settings(default_config: dict, settings: object) -> dict:
@@ -55,21 +52,17 @@ def apply_settings(default_config: dict, settings: object) -> dict:
             if isinstance(threshold, int) and not isinstance(threshold, bool) and 1 <= threshold <= 10:
                 theme["threshold"] = threshold
             if isinstance(sources, dict):
-                defaults_by_id = {source.get("source_id"): source for source in theme.get("sources", [])}
-                restored = []
-                for source_id, saved_source in sources.items():
-                    if isinstance(saved_source, bool) and source_id in defaults_by_id:
-                        source = copy.deepcopy(defaults_by_id[source_id])
+                # config.yaml がソース一覧の正。KVは各ソースのON/OFFだけを預かる。
+                # KVに無いソースはON、config.yamlに無いソースは無視する。
+                for source in theme.get("sources", []):
+                    saved_source = sources.get(source.get("source_id"))
+                    if isinstance(saved_source, bool):
                         source["enabled"] = saved_source
-                        restored.append(source)
-                    elif isinstance(saved_source, dict) and isinstance(saved_source.get("name"), str) and isinstance(saved_source.get("url"), str) and isinstance(saved_source.get("enabled"), bool):
-                        restored.append({"source_id": source_id, "name": saved_source["name"], "url": saved_source["url"], "enabled": saved_source["enabled"], "user_added": bool(saved_source.get("user_added", False))})
-                theme["sources"] = restored
+                    elif isinstance(saved_source, dict) and isinstance(saved_source.get("enabled"), bool):
+                        source["enabled"] = saved_source["enabled"]
     run = settings.get("run")
     if isinstance(run, dict):
-        times = run.get("times")
-        if isinstance(times, list) and 1 <= len(times) <= 12 and all(_valid_time(value) for value in times):
-            config.setdefault("run", {})["times"] = sorted(set(times))
+        # 実行時刻はワークフローの cron が正。KVの times は取り込まない。
         for key in ("keep_below_threshold", "read_dim_enabled"):
             if isinstance(run.get(key), bool):
                 config.setdefault("run", {})[key] = run[key]
@@ -81,7 +74,11 @@ def fetch_settings(url: str, timeout: float = 5.0) -> dict | None:
     if not url:
         return None
     try:
-        request = urllib.request.Request(url.rstrip("/") + "/config", headers={"Accept": "application/json"})
+        # Python-urllib のままだと Cloudflare のブラウザ判定（error 1010）で 403 になる。
+        request = urllib.request.Request(
+            url.rstrip("/") + "/config",
+            headers={"Accept": "application/json", "User-Agent": USER_AGENT},
+        )
         with urllib.request.urlopen(request, timeout=timeout) as response:
             payload = json.loads(response.read().decode("utf-8"))
         return payload.get("config") if isinstance(payload, dict) else None
