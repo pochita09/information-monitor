@@ -758,49 +758,6 @@
     "processed_at": "2026-08-29T13:22:10.229398+00:00"
   },
   {
-    "item_id": "3d74eb098ff96a4b6a35e163f9f4c007cca86fa2d7b08af814a49a06f1c76166",
-    "title": "Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures",
-    "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
-    "summary": "Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures",
-    "source": "Anthropic Research",
-    "channel": "RSS",
-    "published_at": "2026-08-28T00:00:00+00:00",
-    "category": "研究・論文",
-    "importance": "高",
-    "score": 8,
-    "summary_ja": "自動化された研究者が、AIアラインメントにおける失敗を確実に軽減できることを示す研究成果が発表されました。\nAIの安全性と信頼性向上に関する重要な研究です。",
-    "title_ja": "自動化された研究者がアラインメントの失敗を確実に軽減",
-    "tags": [
-      "AI安全性",
-      "アラインメント",
-      "研究",
-      "自動化"
-    ],
-    "topic_id": "ai-models",
-    "processed_at": "2026-08-29T13:22:10.229398+00:00"
-  },
-  {
-    "item_id": "b6d0f23d3d2f50b133ef2584a1992635372b00293cd94ec5d988ff44a5a16713",
-    "title": "Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude",
-    "url": "https://www.anthropic.com/research/enabling-independent-research",
-    "summary": "Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude",
-    "source": "Anthropic Research",
-    "channel": "RSS",
-    "published_at": "2026-08-26T00:00:00+00:00",
-    "category": "その他",
-    "importance": "低",
-    "score": 5,
-    "summary_ja": "Anthropicは、人々がClaudeをどのように利用しているかについての独立した研究を可能にするための取り組みを進めています。\nAI利用に関する透明性と研究促進です。",
-    "title_ja": "Claudeの利用に関する独立研究を可能に",
-    "tags": [
-      "Claude",
-      "研究",
-      "透明性"
-    ],
-    "topic_id": "ai-models",
-    "processed_at": "2026-08-29T13:22:10.229398+00:00"
-  },
-  {
     "item_id": "3cc3d9f4fd8d63ade59fd11b7358526c75483e1089c82258bc1798459cf8d507",
     "title": "ScienceAug 18, 2026How Claude is accelerating protein design and analytical chemistryIn this post, we share two results that show how Claude can help life scientists increase the pace of their research.",
     "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
