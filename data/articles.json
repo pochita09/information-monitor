@@ -1,5 +1,47 @@
 [
   {
+    "item_id": "3d74eb098ff96a4b6a35e163f9f4c007cca86fa2d7b08af814a49a06f1c76166",
+    "title": "Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures",
+    "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+    "summary": "Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-08-28T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "自動化された研究者がアライメントの失敗を確実に軽減できることが示された。",
+    "title_ja": "自動化された研究者がアライメント失敗を軽減",
+    "tags": [
+      "AIアライメント",
+      "自動研究",
+      "安全性"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-08-29T14:27:36.271929+00:00"
+  },
+  {
+    "item_id": "b6d0f23d3d2f50b133ef2584a1992635372b00293cd94ec5d988ff44a5a16713",
+    "title": "Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude",
+    "url": "https://www.anthropic.com/research/enabling-independent-research",
+    "summary": "Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-08-26T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "人々がClaudeをどのように利用しているかに関する、独立した研究を可能にする取り組み。",
+    "title_ja": "Claudeの利用実態に関する独立研究の支援",
+    "tags": [
+      "Claude",
+      "社会的影響",
+      "独立研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-08-29T14:27:36.271929+00:00"
+  },
+  {
     "item_id": "9f43b3b937ec6ed84162830ad0f0df7e48ad2fe02c54dae5d9f7b64c82debdad",
     "title": "Our decision on Cursor following its acquisition by SpaceX",
     "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
