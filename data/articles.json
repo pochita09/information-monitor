@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "5a230a77acb814a257dfa96a11fdf84c6ade9465807b76c365dc296042aeb371",
+    "title": "A milestone in expanding access to AI",
+    "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+    "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-08-31T04:00:00+00:00",
+    "category": "価格改定",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "ChatGPT Adsが年間売上ランレート10億ドルに到達し、無料および手頃なオプションを通じてAIへのアクセスをグローバルに拡大します。",
+    "title_ja": "ChatGPT広告、年間売上ランレート10億ドルを突破",
+    "tags": [
+      "ChatGPT",
+      "広告",
+      "ビジネス",
+      "収益化"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-08-31T19:04:27.691587+00:00"
+  },
+  {
     "item_id": "3d74eb098ff96a4b6a35e163f9f4c007cca86fa2d7b08af814a49a06f1c76166",
     "title": "Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures",
     "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
