@@ -1,7 +1,7 @@
 {
-  "https://openai.com/news/rss.xml": "2026-08-31T04:00:00+00:00",
+  "https://openai.com/news/rss.xml": "2026-08-31T07:00:00+00:00",
   "https://openai.com/news/engineering/rss.xml": "2026-05-27T07:00:00+00:00",
   "https://deepmind.google/blog/rss.xml": "2026-08-27T16:11:32+00:00",
-  "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": "2026-08-27T00:00:00+00:00",
+  "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml": "2026-08-31T00:00:00+00:00",
   "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml": "2026-08-28T00:00:00+00:00"
 }
