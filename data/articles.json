@@ -1,5 +1,131 @@
 [
   {
+    "item_id": "1d3581960e94b8568345d57b1a8c702482f75de6f8a5153323df88d94698bee7",
+    "title": "How AI-native companies turn workflows into operating capability",
+    "url": "https://openai.com/index/ai-native-company-workflows",
+    "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-01T17:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "BasisやClayなどの企業がAIエージェントを活用し、業務プロセスを効率化している事例を紹介しています。",
+    "title_ja": "AIネイティブ企業のワークフロー活用事例",
+    "tags": [
+      "AIエージェント",
+      "ワークフロー",
+      "企業活用"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T08:41:36.518078+00:00"
+  },
+  {
+    "item_id": "b066f3bd6087e32bc663c1f2093754927a44214027c043afd78de43c58b35d28",
+    "title": "Path to Astra: critical capabilities and frontier safeguards",
+    "url": "https://openai.com/index/path-to-astra",
+    "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-01T13:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Astraは準備フレームワークのサイバーセキュリティ基準を満たした初のOpenAIモデルで、強固な安全対策が施されています。",
+    "title_ja": "新モデルAstraとセキュリティ基準",
+    "tags": [
+      "OpenAI",
+      "セキュリティ",
+      "AIモデル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T08:41:36.518078+00:00"
+  },
+  {
+    "item_id": "4470f186c1ebba4e66c72350adfef404d6284f5ae12046a902eed775309fd263",
+    "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+    "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+    "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-01T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "医療機関がEHRなどのデータをChatGPTに接続し、臨床医が患者情報や医療研究に安全にアクセスできるようになりました。",
+    "title_ja": "ChatGPTが医療電子カルテと連携開始",
+    "tags": [
+      "ChatGPT",
+      "医療",
+      "データ連携"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T08:41:36.518078+00:00"
+  },
+  {
+    "item_id": "84b15475dd76dbd23766b79d0f441c1542ff92fea69b719df3cea36bcf179f7f",
+    "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+    "url": "https://openai.com/index/gilbert-tobin",
+    "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-01T01:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "Gilbert + Tobinがガバナンスと責任体制を重視しながら、ChatGPT Enterpriseを活用・拡大している事例です。",
+    "title_ja": "法律事務所でのAIガバナンスと導入事例",
+    "tags": [
+      "法律",
+      "ガバナンス",
+      "Enterprise"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T08:41:36.518078+00:00"
+  },
+  {
+    "item_id": "2ed0af0acb952af93fda8f50525b61e953a1da57e8427db841503f6176d5d87f",
+    "title": "Introducing agentic video understanding with Gemini",
+    "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-01T17:08:51+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "Geminiによる高度なエージェント型動画理解機能が導入されました。",
+    "title_ja": "Geminiの自律型動画理解機能を発表",
+    "tags": [
+      "Gemini",
+      "動画理解",
+      "AIエージェント"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T08:41:36.518078+00:00"
+  },
+  {
+    "item_id": "9f777e04c35f19b1a1f8776c440acc4e608240241c68dae9b5ce9ed563317b08",
+    "title": "Developing Enterprise Frontier Safeguards with our customers",
+    "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+    "summary": "Developing Enterprise Frontier Safeguards with our customers",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-09-01T00:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "顧客企業と共に開発する、エンタープライズ向けのフロンティアAI安全対策に関する発表です。",
+    "title_ja": "顧客と進めるエンタープライズ向け安全対策",
+    "tags": [
+      "Anthropic",
+      "安全性",
+      "エンタープライズ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T08:41:36.518078+00:00"
+  },
+  {
     "item_id": "d70489c03784c61a97081cb1bcfc9879856d8012efc55cd1cc99acec58e9ad71",
     "title": "Polimill builds Japan's next-generation public AI infrastructure",
     "url": "https://openai.com/index/polimill",
