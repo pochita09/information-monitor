@@ -1,5 +1,47 @@
 [
   {
+    "item_id": "f83e09d1df3f6f5e8a1bfe05329dc908a47fe96c35d80b5c874ff046e2c4aaa2",
+    "title": "Proactive cyber defense for governments and enterprises",
+    "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-02T16:24:24+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "政府や企業を対象としたプロアクティブなサイバー防衛に関する取り組みの紹介。",
+    "title_ja": "政府・企業向けプロアクティブサイバー防衛",
+    "tags": [
+      "サイバーセキュリティ",
+      "AI",
+      "DeepMind"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T16:26:24.574815+00:00"
+  },
+  {
+    "item_id": "e9a6536852ee9e0ffe4f551303f64162800fcef92c70b6717991c6e199b164d0",
+    "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+    "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-02T16:18:31+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "新モデルであるGemini 3.8 Flashおよび3.8 Flash Cyberの紹介。",
+    "title_ja": "Gemini 3.8 Flash / Cyber の発表",
+    "tags": [
+      "Gemini",
+      "新モデル",
+      "AIモデル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T16:26:24.574815+00:00"
+  },
+  {
     "item_id": "1d3581960e94b8568345d57b1a8c702482f75de6f8a5153323df88d94698bee7",
     "title": "How AI-native companies turn workflows into operating capability",
     "url": "https://openai.com/index/ai-native-company-workflows",
