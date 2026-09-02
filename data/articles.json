@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "0ebf2c3d8be14117cde037eeb75dcb21f70bd4e1c9a74bea86a3e8e0d33c912e",
+    "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+    "url": "https://openai.com/index/atv-big-air-tour",
+    "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-02T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "ATV Big Air TourがChatGPTを活用し、マーケティングや商品管理などの作業時間を大幅に短縮しました。",
+    "title_ja": "ATV Big Air Tour、ChatGPTで業務効率を大幅向上",
+    "tags": [
+      "ChatGPT",
+      "業務効率化",
+      "OpenAI",
+      "活用事例"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-02T23:59:25.033569+00:00"
+  },
+  {
     "item_id": "f83e09d1df3f6f5e8a1bfe05329dc908a47fe96c35d80b5c874ff046e2c4aaa2",
     "title": "Proactive cyber defense for governments and enterprises",
     "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
