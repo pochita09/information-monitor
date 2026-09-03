@@ -1,5 +1,89 @@
 [
   {
+    "item_id": "913bcad64f18a770073e8a6385a2621bf9c036e8f45ddbd53d10e5380c1bd28e",
+    "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+    "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+    "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-03T13:15:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIが重要インフラの防衛支援やサイバーAIの提供に向け、10億ドルの拠出を発表しました。",
+    "title_ja": "重要インフラ保護に10億ドルを拠出",
+    "tags": [
+      "OpenAI",
+      "サイバーセキュリティ",
+      "AI支援"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-03T23:55:09.896101+00:00"
+  },
+  {
+    "item_id": "f98a05e2cf3f4f3119f2a8a79ecb4da7b30af9fc3512158e3ab5d182fcae42b6",
+    "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+    "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+    "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-03T12:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "LegoraがGPT-6 Astraを活用し、多数の文書レビューとエラー検出を短時間で実現しました。",
+    "title_ja": "GPT-6 Astraで財務書類レビューを効率化",
+    "tags": [
+      "GPT-6 Astra",
+      "文書レビュー",
+      "金融"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-03T23:55:09.896101+00:00"
+  },
+  {
+    "item_id": "106dd5fcdb36255acc7e8e8d24f3e4082f5c89e314ff214198dff53ce1efdcc5",
+    "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+    "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+    "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-03T12:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "PlaycoがGPT-6 Astraを使い、ゲームプロトタイプのマニュアル修正を50%削減しました。",
+    "title_ja": "GPT-6 Astraによるゲームプロトタイピング",
+    "tags": [
+      "GPT-6 Astra",
+      "ゲーム開発",
+      "プロトタイプ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-03T23:55:09.896101+00:00"
+  },
+  {
+    "item_id": "9f8f624240fd8b5e7490cd101194fd728b258370298d509efa8a686f72cf334d",
+    "title": "Safety overview: GPT-6 Astra",
+    "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+    "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-03T00:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "準備フレームワークのサイバーセキュリティ能力でクリティカルレベルに達した新型モデルの安全性を解説。",
+    "title_ja": "GPT-6 Astraの安全性概要",
+    "tags": [
+      "GPT-6 Astra",
+      "安全性",
+      "サイバーセキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-03T23:55:09.896101+00:00"
+  },
+  {
     "item_id": "ffb5d555c9dbcdabdabf09613fe7001836ff99896393dbcb12052fdc3fbbb64c",
     "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
     "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
