@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "ffb5d555c9dbcdabdabf09613fe7001836ff99896393dbcb12052fdc3fbbb64c",
+    "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+    "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-03T15:02:08+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Google DeepMindが、これまでで最も高度で正確なグローバル天気AIモデル「WeatherNext 3」を発表しました。",
+    "title_ja": "高精度な新世界天気AIモデル「WeatherNext 3」発表",
+    "tags": [
+      "AIモデル",
+      "気象予測",
+      "DeepMind",
+      "WeatherNext"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-03T16:16:56.041086+00:00"
+  },
+  {
     "item_id": "0ebf2c3d8be14117cde037eeb75dcb21f70bd4e1c9a74bea86a3e8e0d33c912e",
     "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
     "url": "https://openai.com/index/atv-big-air-tour",
