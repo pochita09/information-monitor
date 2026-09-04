@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "4ee6bd7ac3026f87878b0489ff8853b2de5869c2430db37714e776d6b8698582",
+    "title": "Sep 4, 2026ScienceFormalizing Fermat's Last Theorem",
+    "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+    "summary": "Sep 4, 2026ScienceFormalizing Fermat's Last Theorem",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-04T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Anthropicがフェルマーの最終定理の形式化に関する研究成果を発表しました。",
+    "title_ja": "フェルマーの最終定理の形式化",
+    "tags": [
+      "数学",
+      "形式化",
+      "研究成果",
+      "Anthropic"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-04T23:53:54.507392+00:00"
+  },
+  {
     "item_id": "913bcad64f18a770073e8a6385a2621bf9c036e8f45ddbd53d10e5380c1bd28e",
     "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
     "url": "https://openai.com/index/daybreak-for-frontline-defenders",
