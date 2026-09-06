@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "6e44f21deac8780e9767fd5f0bef3fab22d45e5352d8f82887d178d640eabb5d",
+    "title": "An Alien Mind",
+    "url": "https://openai.com/index/an-alien-mind",
+    "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-06T09:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIのJakub Pachocki氏が、能力を増すAIの安全性確保や国際的な協調の重要性について語っています。",
+    "title_ja": "高度化するAIの安全性とアライメント",
+    "tags": [
+      "OpenAI",
+      "AI安全性",
+      "アライメント",
+      "国際協調"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-06T23:43:00.994732+00:00"
+  },
+  {
+    "item_id": "615cb225113f5a221fd9dcc885449ee6ca6a49400365f179dcef129451573a35",
+    "title": "Research acceleration: The view inside OpenAI",
+    "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+    "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-06T08:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "OpenAI内部でのコーディングエージェント活用による、AI研究の加速や実験速度の向上に関する初期データが公開されました。",
+    "title_ja": "コーディングエージェントによる研究加速",
+    "tags": [
+      "OpenAI",
+      "コーディングエージェント",
+      "研究加速",
+      "生産性向上"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-06T23:43:00.994732+00:00"
+  },
+  {
     "item_id": "4ee6bd7ac3026f87878b0489ff8853b2de5869c2430db37714e776d6b8698582",
     "title": "Sep 4, 2026ScienceFormalizing Fermat's Last Theorem",
     "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
