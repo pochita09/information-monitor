@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "4089e98be1bb7bd456dcad3ab40f757e974fedeea44a8e659ae66bf024e294bb",
+    "title": "Supporting independent journalism in Ukraine",
+    "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+    "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-07T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIがAIRPPUおよびWAN-IFRAと提携し、ウクライナの報道機関のイノベーションと独立系ジャーナリズムを強化するAIプログラムを立ち上げました。",
+    "title_ja": "OpenAI、ウクライナの独立系メディア支援AIプログラムを開始",
+    "tags": [
+      "OpenAI",
+      "ウクライナ",
+      "メディア支援",
+      "社会貢献"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-07T09:13:37.412832+00:00"
+  },
+  {
     "item_id": "6e44f21deac8780e9767fd5f0bef3fab22d45e5352d8f82887d178d640eabb5d",
     "title": "An Alien Mind",
     "url": "https://openai.com/index/an-alien-mind",
