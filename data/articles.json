@@ -1,5 +1,28 @@
 [
   {
+    "item_id": "7a77f24cbb07e800fe6a62d1b5fd86e3c875fbcc4fb829cdbfd241312da65cc0",
+    "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+    "url": "https://openai.com/index/codex-quantum-computing-experiments",
+    "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-08T17:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "MITの研究者がGPT-5.6 SolとCodexを活用し、量子計算実験の自動実行や結果分析、量子ビットの校正を行っている。",
+    "title_ja": "GPT-5.6 Solで量子計算実験を自動化",
+    "tags": [
+      "GPT-5.6",
+      "量子コンピューティング",
+      "自動化",
+      "OpenAI",
+      "AI研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-08T23:59:51.880592+00:00"
+  },
+  {
     "item_id": "47e5555fbd826207022e3e65a13858ed541b25b80ad65da324bc4fc2c9cdbb3e",
     "title": "The Work Now Within Reach",
     "url": "https://openai.com/index/the-work-now-within-reach",
