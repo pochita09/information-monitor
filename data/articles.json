@@ -1,5 +1,93 @@
 [
   {
+    "item_id": "47e5555fbd826207022e3e65a13858ed541b25b80ad65da324bc4fc2c9cdbb3e",
+    "title": "The Work Now Within Reach",
+    "url": "https://openai.com/index/the-work-now-within-reach",
+    "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-08T13:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "高性能かつ手頃な価格のAIが、人と企業の業務範囲を広げ、経済的な成長を促進する方法について解説しています。",
+    "title_ja": "AIの進化がもたらす新たな経済成長と業務効率化",
+    "tags": [
+      "OpenAI",
+      "AI",
+      "ビジネス",
+      "経済成長"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-08T16:29:22.746610+00:00"
+  },
+  {
+    "item_id": "2394055481aebd3786b7156da4f419890a9dea313724b0ca74cce9815bc39628",
+    "title": "Funding grants for new research into AI and teen development",
+    "url": "https://openai.com/index/teen-development-research-grants",
+    "summary": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-08T09:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIが生成AIの十代の成長や安全への影響に関する独立系研究を支援するため、500万ドルの助成金プログラムを開始しました。",
+    "title_ja": "生成AIと十代の成長に関する研究助成金の募集",
+    "tags": [
+      "OpenAI",
+      "研究助成",
+      "安全性",
+      "教育"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-08T16:29:22.746610+00:00"
+  },
+  {
+    "item_id": "966c4c79b11f206a45bf648d88d6d274074b082bb374d3451247ab666e5602ea",
+    "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+    "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+    "summary": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-08T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 5,
+    "summary_ja": "OpenAIが学生や教育者、ジャーナリスト向けにツールやトレーニングを提供し、ジャーナリズム支援の取り組みを拡大します。",
+    "title_ja": "AIを活用したジャーナリズム支援の拡大",
+    "tags": [
+      "OpenAI",
+      "ジャーナリズム",
+      "メディア",
+      "教育"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-08T16:29:22.746610+00:00"
+  },
+  {
+    "item_id": "4df9331c46628e04a74c43bc5b8ac12ebaa709a6c51aa608c4171dc791310c80",
+    "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+    "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+    "summary": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-08T14:00:15+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "ヒトゲノムにおける90億もの1塩基変異の分子効果をマッピングした「AlphaGenome Atlas」が発表されました。",
+    "title_ja": "全ヒトDNA変異の予測マップ「AlphaGenome Atlas」公開",
+    "tags": [
+      "DeepMind",
+      "ゲノム",
+      "AI",
+      "研究成果"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-08T16:29:22.746610+00:00"
+  },
+  {
     "item_id": "4089e98be1bb7bd456dcad3ab40f757e974fedeea44a8e659ae66bf024e294bb",
     "title": "Supporting independent journalism in Ukraine",
     "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
