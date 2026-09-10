@@ -1,5 +1,90 @@
 [
   {
+    "item_id": "dbf3d285d129cd5fc0b170bbd39a626a68afe9d9d3e1f85cc17fd127fcd0c860",
+    "title": "The AI policy window is open. We need to act.",
+    "url": "https://openai.com/index/ai-policy-window",
+    "summary": "Chris Lehane argues that stronger AI capabilities require stronger safety evidence, shared standards, and durable policy action while the policy window remains open.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-09T13:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "AIの能力向上に伴い、より強力な安全性評価や共有基準、持続的な政策行動が今必要であると主張しています。",
+    "title_ja": "AI政策の窓が開いている：今こそ行動が必要",
+    "tags": [
+      "AI政策",
+      "安全性",
+      "規制"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-10T00:01:44.379393+00:00"
+  },
+  {
+    "item_id": "c4648e30548869db5246e452ebebd291741c01000d5a841ed99185558047ddff",
+    "title": "GPT-6 Astra: The next generation in intelligence for work",
+    "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+    "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-09T11:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "高度な推論やPC操作能力、優れた文章・デザイン判断力を備えた、ビジネス向けの最も高性能なモデルです。",
+    "title_ja": "ビジネス向け次世代モデル「GPT-6 Astra」発表",
+    "tags": [
+      "OpenAI",
+      "GPT-6",
+      "新モデル",
+      "ビジネス"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-10T00:01:44.379393+00:00"
+  },
+  {
+    "item_id": "2cd2e9e817d70482d38d13b17dfe0ab3a52f6871cd1330ba46b4e4b0e7a8433c",
+    "title": "Paul Christiano joins OpenAI Foundation Board",
+    "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+    "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-09T17:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "AIアライメントや安全性、標準化の専門知識を持つポール・クリスティアーノ氏が理事会および安全性・セキュリティ委員会に参加しました。",
+    "title_ja": "ポール・クリスティアーノ氏がOpenAI財団理事会に参加",
+    "tags": [
+      "OpenAI",
+      "ガバナンス",
+      "安全性"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-10T00:01:44.379393+00:00"
+  },
+  {
+    "item_id": "54d825406d8eec8315a77eb13f33859392e08124ef3bd9f15964c39127ab4a92",
+    "title": "Sep 9, 2026AlignmentAn alignment assessment of recent cybersecurity incidents",
+    "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+    "summary": "Sep 9, 2026AlignmentAn alignment assessment of recent cybersecurity incidents",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-09T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "近年のサイバーセキュリティインシデントに対するAIのアライメント評価についての報告です。",
+    "title_ja": "最近のサイバーセキュリティインシデントに関するアライメント評価",
+    "tags": [
+      "Anthropic",
+      "サイバーセキュリティ",
+      "アライメント"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-10T00:01:44.379393+00:00"
+  },
+  {
     "item_id": "7a77f24cbb07e800fe6a62d1b5fd86e3c875fbcc4fb829cdbfd241312da65cc0",
     "title": "How GPT-5.6 Sol helps run quantum computing experiments",
     "url": "https://openai.com/index/codex-quantum-computing-experiments",
