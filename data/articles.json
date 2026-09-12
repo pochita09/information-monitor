@@ -1,5 +1,28 @@
 [
   {
+    "item_id": "4cae7cc94c343e88034087eb427037fda4a475cb321fb33c2b3910f1b8d08509",
+    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+    "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-11T10:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIが10億人のChatGPTユーザーを支えるため、ストレージ基盤「Habitat」をグローバル規模へ拡張した背景を解説。",
+    "title_ja": "ChatGPT、10億人のためのストレージ基盤拡張",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "インフラ",
+      "ストレージ",
+      "スケーリング"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-12T00:04:00.244077+00:00"
+  },
+  {
     "item_id": "843639726ccc8ce55f1dfb268ce2569b753f3cbf5aba027864ba98c0ecbcff60",
     "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
     "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
