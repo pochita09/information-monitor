@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "f6b3c9071a10c052a54a50a72f778ef8326bc1d384035eda32be8c43e577bf05",
+    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+    "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-14T00:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "PerplexityがGPT-6 Astraを導入し、通信やソフトウェア変更、本番システムの監視を自律的に実行しています。",
+    "title_ja": "Perplexity、GPT-6 Astraでシステムを自律化",
+    "tags": [
+      "Perplexity",
+      "GPT-6 Astra",
+      "AIエージェント",
+      "システム運用"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-12T08:33:35.044425+00:00"
+  },
+  {
+    "item_id": "8c17d349ddadd577056d47ec7fac8104c9bdc00f25868fd083fc8c35ea9f0ea3",
+    "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+    "url": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-11T16:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "DevinがGPT-6 Astraを活用して自身の成果物をテストし、エンジニアのコードレビュー負担軽減を目指します。",
+    "title_ja": "Devin、GPT-6 Astraで自己テスト能力を向上",
+    "tags": [
+      "Devin",
+      "GPT-6 Astra",
+      "ソフトウェアテスト",
+      "開発支援"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-12T08:33:35.044425+00:00"
+  },
+  {
     "item_id": "4cae7cc94c343e88034087eb427037fda4a475cb321fb33c2b3910f1b8d08509",
     "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
     "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
