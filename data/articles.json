@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "1dfe50b0c5bbf23e1c43949c70f9d9e5d1194b846be14fea70457bd8f64e4ebe",
+    "title": "How Fyxer built an AI executive assistant people trust",
+    "url": "https://openai.com/index/fyxer",
+    "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-14T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "FyxerはOpenAIのモデルやファインチューニングを活用し、ユーザーの文体でメールの下書きや受信トレイの整理を行うAI秘書を構築しました。",
+    "title_ja": "Fyxer、OpenAIを活用した信頼のAI秘書を開発",
+    "tags": [
+      "OpenAI",
+      "AIアシスタント",
+      "ファインチューニング",
+      "メール管理"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-14T18:00:16.957218+00:00"
+  },
+  {
     "item_id": "f6b3c9071a10c052a54a50a72f778ef8326bc1d384035eda32be8c43e577bf05",
     "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
     "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
