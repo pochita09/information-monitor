@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "9cf6c7c41645418037bee96821c10b26e5518e7f87b71ccf7fdacf15e2654086",
+    "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-15T17:05:57+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Google DeepMindが新しい「Gemini 3.8 Live」および「3.8 Live Extended Thinking」を発表しました。",
+    "title_ja": "Gemini 3.8 Liveと拡張思考機能の発表",
+    "tags": [
+      "Google",
+      "Gemini",
+      "AIモデル",
+      "新機能"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-16T00:06:14.584794+00:00"
+  },
+  {
     "item_id": "1dfe50b0c5bbf23e1c43949c70f9d9e5d1194b846be14fea70457bd8f64e4ebe",
     "title": "How Fyxer built an AI executive assistant people trust",
     "url": "https://openai.com/index/fyxer",
