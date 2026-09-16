@@ -1,5 +1,71 @@
 [
   {
+    "item_id": "503f7cf02e50dc20073fdbbfb4ecd28e8823aaafd4d166ad124c47f6b8da5678",
+    "title": "Helping older adults use AI in everyday life",
+    "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+    "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-16T16:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIとAARPが全米10都市で高齢者向けにChatGPTの無料ワークショップを実施し、安全なAIスキル習得を支援します。",
+    "title_ja": "高齢者向けAI活用ワークショップの開催",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "教育",
+      "アクセシビリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-16T16:39:50.552953+00:00"
+  },
+  {
+    "item_id": "c08011f669622a7585be98abd84bb9bc10c1bff2d0a98b168da550ce781fa9f6",
+    "title": "Reimagining advertising with AI",
+    "url": "https://openai.com/index/reimagining-advertising-with-ai",
+    "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-16T13:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "スポンサードエージェントやマーケター向けツール、HubSpot・Shopifyとの連携など、AIを活用した新しい広告機能を発表しました。",
+    "title_ja": "AIを活用した新しい広告体験の展開",
+    "tags": [
+      "OpenAI",
+      "広告",
+      "マーケティング",
+      "API連携"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-16T16:39:50.552953+00:00"
+  },
+  {
+    "item_id": "a5d64c57f191499352cd35cd7c2061dcc8fc1f7d6dc602842826e1b795e884f0",
+    "title": "How workers are unlocking new ways of working",
+    "url": "https://openai.com/index/unlocking-new-ways-of-working",
+    "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-16T09:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "OpenAIの経済研究により、労働者が従来の役割を超えてどのようにAIを利用し、どのような業務が定着しているかが示されました。",
+    "title_ja": "労働者による新しいAI活用の実態調査",
+    "tags": [
+      "OpenAI",
+      "調査",
+      "労働",
+      "経済研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-16T16:39:50.552953+00:00"
+  },
+  {
     "item_id": "9cf6c7c41645418037bee96821c10b26e5518e7f87b71ccf7fdacf15e2654086",
     "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
     "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
