@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "157ed4563f59848c3873e7c12ac54a11bafa39ad87f34550658f65226e5e33ce",
+    "title": "Our framework for reporting model misalignment",
+    "url": "https://openai.com/index/model-misalignment-reporting-framework",
+    "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-16T17:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIがモデルの意図不一致を追跡・調査・開示するためのフレームワークを共有し、実際の挙動に関する6つの報告を公開しました。",
+    "title_ja": "OpenAI、モデルの意図不一致に関する報告フレームワークを公開",
+    "tags": [
+      "OpenAI",
+      "AI安全性",
+      "モデルの整合性",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-17T00:17:06.067211+00:00"
+  },
+  {
     "item_id": "503f7cf02e50dc20073fdbbfb4ecd28e8823aaafd4d166ad124c47f6b8da5678",
     "title": "Helping older adults use AI in everyday life",
     "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
