@@ -1,5 +1,93 @@
 [
   {
+    "item_id": "04b0c0f65a8c23b33f5cfdf41a742740aa53034c2f533443cc1fa8aef4e3aee4",
+    "title": "How Cooley is accelerating IPO work with ChatGPT",
+    "url": "https://openai.com/index/cooley-gopublic",
+    "summary": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-17T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "法律事務所のCooleyがChatGPTを活用したシステムを構築し、IPOプロセスの迅速化と業務効率化を実現しています。",
+    "title_ja": "Cooley、ChatGPTでIPO業務を効率化",
+    "tags": [
+      "ChatGPT",
+      "法律",
+      "IPO",
+      "業務効率化"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-18T00:02:24.245789+00:00"
+  },
+  {
+    "item_id": "9b07713138b440a27ac73f85e7b7162d97b464a5f9290603a3dfea240d087cb2",
+    "title": "Introducing Astra for Law",
+    "url": "https://openai.com/index/astra-for-law",
+    "summary": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-17T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "法務特有のワークフローや機密性の高いクライアント業務に対応する、法務向けの先進的なAI機能とデータ連携を提供します。",
+    "title_ja": "OpenAI、法務向け「Astra for Law」を発表",
+    "tags": [
+      "OpenAI",
+      "法律",
+      "法務AI",
+      "セキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-18T00:02:24.245789+00:00"
+  },
+  {
+    "item_id": "c28fc31981f4874ef1aafd8f4466712dad0017bf1c2866de42dce18d6048c17f",
+    "title": "Introducing the Life Sciences Verification Program",
+    "url": "https://www.anthropic.com/news/life-sciences-verification-program",
+    "summary": "Introducing the Life Sciences Verification Program",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-09-17T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "ライフサイエンス分野における安全性や信頼性を検証するための新しいプログラムが発表されました。",
+    "title_ja": "Anthropic、ライフサイエンス検証プログラムを開始",
+    "tags": [
+      "Anthropic",
+      "ライフサイエンス",
+      "安全性",
+      "検証プログラム"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-18T00:02:24.245789+00:00"
+  },
+  {
+    "item_id": "b7b78b39ada874b6ddb43df1249cfb33ebd9edbf47582e51e4f3633b9f92983a",
+    "title": "Sep 17, 2026ScienceHow Claude is uplifting biomolecular modeling",
+    "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+    "summary": "Sep 17, 2026ScienceHow Claude is uplifting biomolecular modeling",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-17T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "バイオ分子モデリングの研究において、Claudeがどのように科学的アプローチを向上させているかを紹介しています。",
+    "title_ja": "Claudeがバイオ分子モデリングを支援",
+    "tags": [
+      "Claude",
+      "研究",
+      "バイオ分子",
+      "モデリング"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-18T00:02:24.245789+00:00"
+  },
+  {
     "item_id": "157ed4563f59848c3873e7c12ac54a11bafa39ad87f34550658f65226e5e33ce",
     "title": "Our framework for reporting model misalignment",
     "url": "https://openai.com/index/model-misalignment-reporting-framework",
