@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "a54684b99807ee3afb57845d73915edc8a58b89141965d9e0c8cd4be228ffc7b",
+    "title": "Introducing the Australian Youth Safety Blueprint",
+    "url": "https://openai.com/index/australian-youth-safety-blueprint",
+    "summary": "OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-18T12:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIは、若者が安全にAIを利用できるように保護・支援する6つの柱からなる「オーストラリアの若者のための安全ブループリント」を発表しました。",
+    "title_ja": "OpenAI、豪州の若者向けAI安全ブループリントを発表",
+    "tags": [
+      "OpenAI",
+      "安全性",
+      "AI規制",
+      "オーストラリア"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-19T08:44:09.128571+00:00"
+  },
+  {
     "item_id": "3ee64f6d225cf34676b1e9c82a489a3e76828a6b5e7764b6b5fed0f970936e24",
     "title": "Partnering with Accenture on embedded evaluation",
     "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
