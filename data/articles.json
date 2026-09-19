@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "3ee64f6d225cf34676b1e9c82a489a3e76828a6b5e7764b6b5fed0f970936e24",
+    "title": "Partnering with Accenture on embedded evaluation",
+    "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+    "summary": "Partnering with Accenture on embedded evaluation",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-09-18T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "Anthropicがアクセンチュアと提携し、AIの組み込み評価に関する取り組みを開始しました。",
+    "title_ja": "Anthropic、アクセンチュアと組み組み込み評価で提携",
+    "tags": [
+      "Anthropic",
+      "アクセンチュア",
+      "AI評価",
+      "パートナーシップ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-19T00:06:12.193112+00:00"
+  },
+  {
     "item_id": "04b0c0f65a8c23b33f5cfdf41a742740aa53034c2f533443cc1fa8aef4e3aee4",
     "title": "How Cooley is accelerating IPO work with ChatGPT",
     "url": "https://openai.com/index/cooley-gopublic",
