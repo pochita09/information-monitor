@@ -1,5 +1,89 @@
 [
   {
+    "item_id": "bd71f911adf47a1cd81553fe07cade40128f87bdd001b6c06f58a3f7e7e9d2c1",
+    "title": "Advisory Group on Mathematics and Artificial Intelligence",
+    "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+    "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-21T12:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIが、AIの成果のレビューと共有を支援するため、数学とAIに関する独立諮問グループと連携を開始しました。",
+    "title_ja": "数学とAIに関する独立諮問グループの設立",
+    "tags": [
+      "OpenAI",
+      "AI安全性",
+      "数学"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-21T18:08:52.015151+00:00"
+  },
+  {
+    "item_id": "8b993ce0a61eeb552099b6ecea0ef08d26d295bad2ae736161d88a624d731925",
+    "title": "Building standards for the next phase of AI",
+    "url": "https://openai.com/index/building-standards-next-phase-ai",
+    "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-21T10:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 7,
+    "summary_ja": "安全性を向上させるため、協調的な評価や報告、ガバナンスを通じた共有の世界的AI基準への道筋をOpenAIが概説しました。",
+    "title_ja": "次世代AIに向けたグローバル標準の構築",
+    "tags": [
+      "OpenAI",
+      "AIガバナンス",
+      "国際標準"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-21T18:08:52.015151+00:00"
+  },
+  {
+    "item_id": "7eb82d3a02c62f0f61eab872d3edf4589cb5cfae58a04456dda78e496be16a36",
+    "title": "Expanding OpenAI Academy with new learning paths",
+    "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
+    "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-21T07:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 5,
+    "summary_ja": "従業員や開発者、リーダー、教育者、学生向けに、実践的なAIスキルを構築・証明するための新しい学習パスが追加されました。",
+    "title_ja": "OpenAI Academyの学習パス拡充",
+    "tags": [
+      "OpenAI Academy",
+      "教育",
+      "AIスキル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-21T18:08:52.015151+00:00"
+  },
+  {
+    "item_id": "f5fb9fa95c38b4fbbf5f8cdae8714e60fe574ae3eb4554583b95db4af046e20d",
+    "title": "How V7 gives AI agents institutional memory",
+    "url": "https://openai.com/index/v7",
+    "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-21T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "V7が社内の散在するファイルをエージェントが活用できる文脈に変換し、複雑な業務の完了を支援します。",
+    "title_ja": "V7が実現するAIエージェントの組織的記憶",
+    "tags": [
+      "GPT",
+      "AIエージェント",
+      "ナレッジ管理"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-21T18:08:52.015151+00:00"
+  },
+  {
     "item_id": "a54684b99807ee3afb57845d73915edc8a58b89141965d9e0c8cd4be228ffc7b",
     "title": "Introducing the Australian Youth Safety Blueprint",
     "url": "https://openai.com/index/australian-youth-safety-blueprint",
