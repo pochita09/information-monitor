@@ -1,5 +1,135 @@
 [
   {
+    "item_id": "dbefc6dfbdc2fdefbf1390ed3db47403d5ca14028c97300468ece95c4e904075",
+    "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+    "url": "https://openai.com/index/ringg",
+    "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-24T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "RinggはマルチリンガルなAIエージェントを活用し、コストを大幅に抑えながら顧客からの問い合わせの最大65%を解決しています。",
+    "title_ja": "Ringg、OpenAI活用で顧客対応の65%を自動化",
+    "tags": [
+      "OpenAI",
+      "カスタマーサポート",
+      "AIエージェント",
+      "音声AI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T16:42:03.494270+00:00"
+  },
+  {
+    "item_id": "196451cb6a52e786b989c17295c0ce556517fe39af19ec7d637153a6bf7e0c35",
+    "title": "Two years of OpenAI Academy",
+    "url": "https://openai.com/index/two-years-of-openai-academy",
+    "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-23T16:00:00+00:00",
+    "category": "その他",
+    "importance": "低",
+    "score": 4,
+    "summary_ja": "OpenAI Academyの設立2周年を記念し、より多くのコミュニティへAIスキルを届ける取り組みが紹介されています。",
+    "title_ja": "OpenAI Academyが設立2周年を迎える",
+    "tags": [
+      "OpenAI Academy",
+      "教育",
+      "コミュニティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T16:42:03.494270+00:00"
+  },
+  {
+    "item_id": "5389f7ac9c7cf09051edd31cf58f7e17fb0cab986abc39251c097d4c5357a2fe",
+    "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+    "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+    "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-23T13:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "ウクライナ政府に対し、民間インフラのサイバー防衛を支援するためDaybreakプログラムへのアクセスを延長しました。",
+    "title_ja": "OpenAI、ウクライナのサイバー防衛支援を延長",
+    "tags": [
+      "サイバーセキュリティ",
+      "ウクライナ",
+      "OpenAI",
+      "防衛"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T16:42:03.494270+00:00"
+  },
+  {
+    "item_id": "9b710585d5d8bee439c06ade8996d4869b138857ee1fd2646095dfb19d1206f1",
+    "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+    "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+    "summary": "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-23T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "東南アジアで3万人のパートナーを対象に、実践的なAIスキルを習得する地域プログラム「GO Forward with AI」を立ち上げました。",
+    "title_ja": "GrabとOpenAI、東南アジアでAIスキル向上プログラムを開始",
+    "tags": [
+      "Grab",
+      "OpenAI",
+      "東南アジア",
+      "教育"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T16:42:03.494270+00:00"
+  },
+  {
+    "item_id": "07d3e7f8bd8e3b30b2c5ada93c296f039d192c74ad7de2b838ae0d103490bc39",
+    "title": "Advancing Private AI Compute with secure, server-side memory",
+    "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+    "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-23T16:00:57+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "個人向けAIのプライベートAI計算において、安全性に配慮したサーバー側メモリ機能が導入されました。",
+    "title_ja": "プライベートAI計算向けセキュアなサーバー側メモリを発表",
+    "tags": [
+      "プライバシー",
+      "AIコンピューティング",
+      "セキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T16:42:03.494270+00:00"
+  },
+  {
+    "item_id": "b3fbdea58867c9d933524c10a533692ad37d5d04fadfd298a1417e3048245e59",
+    "title": "Gemini 3.8 text-to-speech says hello",
+    "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-23T15:25:14+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Gemini 3.8による新しいテキスト読み上げ（音声合成）機能が発表されました。",
+    "title_ja": "Gemini 3.8テキスト読み上げ機能が登場",
+    "tags": [
+      "Gemini",
+      "音声合成",
+      "テキスト読み上げ",
+      "新モデル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T16:42:03.494270+00:00"
+  },
+  {
     "item_id": "9c71be934919ee02214c1a0ec9c39d253b2bf32db5ee29197847a95a40998c62",
     "title": "Better prompt caching for GPT-6",
     "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
