@@ -1,5 +1,94 @@
 [
   {
+    "item_id": "9c71be934919ee02214c1a0ec9c39d253b2bf32db5ee29197847a95a40998c62",
+    "title": "Better prompt caching for GPT-6",
+    "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+    "summary": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-22T21:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "GPT-6のプロンプトキャッシュが改善され、キャッシュヒット率の向上や診断機能、明示的なブレークポイントにより遅延とコストが削減されます。",
+    "title_ja": "GPT-6のプロンプトキャッシュ機能強化",
+    "tags": [
+      "GPT-6",
+      "プロンプトキャッシュ",
+      "API",
+      "コスト削減"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T00:14:34.678484+00:00"
+  },
+  {
+    "item_id": "c74f853c7dece671823353ef639b343f118e99aecb7a391a5dfaadc5717d6afe",
+    "title": "Introducing GPT-6 Sol and Luna",
+    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+    "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-22T18:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "日常業務向けの最先端AIモデル「GPT-6 Sol」と「Luna」が登場し、能力とコストの異なるバランスを提供します。",
+    "title_ja": "新モデル「GPT-6 Sol」と「Luna」発表",
+    "tags": [
+      "GPT-6",
+      "Sol",
+      "Luna",
+      "新モデル",
+      "OpenAI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T00:14:34.678484+00:00"
+  },
+  {
+    "item_id": "ade93b4800d116d57dd7460a92a5c8a71fa6c090f1ad90778b96077ce05f7c28",
+    "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+    "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+    "summary": "GPT‑6 Astra allowed Parallel’s agents to research and synthesize labor-market data in half the time and at half the cost vs. prior models.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-22T12:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "GPT-6 Astraにより、Parallelのエージェントは労働市場データの調査・統合の時間とコストを従来モデルの半分に削減しました。",
+    "title_ja": "GPT-6 Astraでリサーチ時間を半減",
+    "tags": [
+      "GPT-6 Astra",
+      "AIエージェント",
+      "リサーチ",
+      "効率化"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T00:14:34.678484+00:00"
+  },
+  {
+    "item_id": "64d81521df38f6782fe9363032abad63dec6c7ed401a2dbed385197db24d9d9d",
+    "title": "Priorities and principles for effective third party assessments",
+    "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+    "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-22T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIが、最先端モデルおよびセーフガードの厳格で安全、かつ独立した第三者AI安全性評価に関する優先事項と原則を概説しています。",
+    "title_ja": "外部によるAI安全性評価の原則を発表",
+    "tags": [
+      "AI安全性",
+      "第三者評価",
+      "ガバナンス",
+      "OpenAI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-23T00:14:34.678484+00:00"
+  },
+  {
     "item_id": "bd71f911adf47a1cd81553fe07cade40128f87bdd001b6c06f58a3f7e7e9d2c1",
     "title": "Advisory Group on Mathematics and Artificial Intelligence",
     "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
