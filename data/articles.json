@@ -1,5 +1,28 @@
 [
   {
+    "item_id": "a5f2cd8b512152068a3efe1dffb3a6887467712ab5faeba0ba53e7618c8cfa1c",
+    "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+    "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+    "summary": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-09-23T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Claudeを活用して、CRISPRに類似した反復配列を持つ新しい酵素システムが発見されました。",
+    "title_ja": "ClaudeがCRISPR様反復を持つ新酵素システムを発見",
+    "tags": [
+      "Claude",
+      "バイオテクノロジー",
+      "酵素",
+      "CRISPR",
+      "研究成果"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-24T00:22:01.463582+00:00"
+  },
+  {
     "item_id": "dbefc6dfbdc2fdefbf1390ed3db47403d5ca14028c97300468ece95c4e904075",
     "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
     "url": "https://openai.com/index/ringg",
