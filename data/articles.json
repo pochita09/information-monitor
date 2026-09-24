@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "eb4a64937832cd82e3a337da5aa781ab045d2de60e4c72cc2e9f06f66dd90d4c",
+    "title": "Introducing Gemini 3.8 Live with Live Avatar",
+    "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-24T16:20:39+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "ライブアバター機能を備えたGemini 3.8 Liveが発表されました。",
+    "title_ja": "Gemini 3.8 Live アバター機能の発表",
+    "tags": [
+      "Gemini",
+      "Google",
+      "AIアバター",
+      "新機能"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-24T16:59:31.623583+00:00"
+  },
+  {
     "item_id": "a5f2cd8b512152068a3efe1dffb3a6887467712ab5faeba0ba53e7618c8cfa1c",
     "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
     "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
