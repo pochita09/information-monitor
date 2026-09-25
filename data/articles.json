@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "a731f6602f4c57da38f85e1f1fd66f22aa1312fdbbdb7e0cf0534f442b8c2cd5",
+    "title": "Sep 24, 2026EconomicsProject Swap: What happens when agents trade for us?",
+    "url": "https://www.anthropic.com/research/project-swap",
+    "summary": "Sep 24, 2026EconomicsProject Swap: What happens when agents trade for us?",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-24T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "AIエージェントが人間の代わりに取引を行う経済実験「Project Swap」に関するAnthropicの研究成果です。",
+    "title_ja": "AIエージェント間の取引実験「Project Swap」発表",
+    "tags": [
+      "AIエージェント",
+      "経済",
+      "Anthropic",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-25T00:25:02.457458+00:00"
+  },
+  {
     "item_id": "eb4a64937832cd82e3a337da5aa781ab045d2de60e4c72cc2e9f06f66dd90d4c",
     "title": "Introducing Gemini 3.8 Live with Live Avatar",
     "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
