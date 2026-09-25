@@ -1,5 +1,28 @@
 [
   {
+    "item_id": "f2dfbf41dac0675b0a5c35b22d6035b29e6362660da1948e526681e2f61f686a",
+    "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+    "url": "https://openai.com/index/proaction",
+    "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-25T19:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "CodexやGPTシリーズを活用し、Proactionのフリート管理事業が売上60%増と大幅な時間削減を実現しました。",
+    "title_ja": "Proaction、OpenAI活用で売上60%増",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "GPT",
+      "業務効率化",
+      "事例"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-25T17:01:11.459375+00:00"
+  },
+  {
     "item_id": "a731f6602f4c57da38f85e1f1fd66f22aa1312fdbbdb7e0cf0534f442b8c2cd5",
     "title": "Sep 24, 2026EconomicsProject Swap: What happens when agents trade for us?",
     "url": "https://www.anthropic.com/research/project-swap",
