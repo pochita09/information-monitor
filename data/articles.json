@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "a16629f699b5fcc8bed35dfcc5861a1afeb3b506c4c4eac12a26c53cdcc400d2",
+    "title": "Sep 25, 2026ScienceYes, Claude can do Nine Loops",
+    "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+    "summary": "Sep 25, 2026ScienceYes, Claude can do Nine Loops",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-25T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "AnthropicがClaudeの複雑な推論能力に関する研究成果「Yes, Claude can do Nine Loops」を発表しました。",
+    "title_ja": "Claudeの推論能力に関する新研究「Nine Loops」公開",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "AI研究",
+      "推論能力"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-26T00:29:20.439781+00:00"
+  },
+  {
     "item_id": "f2dfbf41dac0675b0a5c35b22d6035b29e6362660da1948e526681e2f61f686a",
     "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
     "url": "https://openai.com/index/proaction",
