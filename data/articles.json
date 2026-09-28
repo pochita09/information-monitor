@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "d70d671648ff5eac52ea3957d74835b4c044fd0c0aff73e5561da1ad89e2faae",
+    "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+    "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+    "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-28T07:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "OpenAIは500万ドルの資金提供およびソフトウェアクレジットと技術支援により、Lenfest AI Collaborative and Fellowship Programを拡大します。",
+    "title_ja": "OpenAI、Lenfest AI協力を500万ドルとクレジットで拡大",
+    "tags": [
+      "OpenAI",
+      "助成金",
+      "AI活用",
+      "メディア支援"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-28T19:33:58.288283+00:00"
+  },
+  {
     "item_id": "a16629f699b5fcc8bed35dfcc5861a1afeb3b506c4c4eac12a26c53cdcc400d2",
     "title": "Sep 25, 2026ScienceYes, Claude can do Nine Loops",
     "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
