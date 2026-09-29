@@ -1,5 +1,48 @@
 [
   {
+    "item_id": "3ef1ed5b44b251f78255f2fb58fbd1117f5cfb17e22f84e63b0e7c0ceb8f3a0c",
+    "title": "Sep 29, 2026Frontier Red TeamGLM-5.3 and the spread of advanced cyber capabilities",
+    "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+    "summary": "Sep 29, 2026Frontier Red TeamGLM-5.3 and the spread of advanced cyber capabilities",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-29T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "フロンティアレッドチームによるGLM-5.3モデルと高度なサイバーセキュリティ能力の拡散に関する調査研究。",
+    "title_ja": "GLM-5.3とサイバー能力の拡散に関する検証",
+    "tags": [
+      "GLM-5.3",
+      "サイバーセキュリティ",
+      "AI安全性",
+      "レッドチーム"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-29T17:59:47.112422+00:00"
+  },
+  {
+    "item_id": "deb2dfbccd3586a3811109a04eed0e09785b7657b88ebe5b847377a368095352",
+    "title": "Sep 29, 2026Societal ImpactsWhat do you want from AI?",
+    "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
+    "summary": "Sep 29, 2026Societal ImpactsWhat do you want from AI?",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-29T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "AI技術や社会への影響に関して、ユーザーがAIに何を求めるのかについての意見を求めている。",
+    "title_ja": "AIに求める役割についての意見募集",
+    "tags": [
+      "社会影響",
+      "AIの未来",
+      "アンケート"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-29T17:59:47.112422+00:00"
+  },
+  {
     "item_id": "7498c1d2c87007549fbf3eccdbbe090bc3b364cf2e199ac78d5d7d42a7d165c5",
     "title": "How we will do better for Australia",
     "url": "https://openai.com/index/how-we-will-do-better-for-australia",
