@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "7498c1d2c87007549fbf3eccdbbe090bc3b364cf2e199ac78d5d7d42a7d165c5",
+    "title": "How we will do better for Australia",
+    "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+    "summary": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-29T01:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIがオーストラリア政府関連サイトでのインシデントについて謝罪し、サイバー防御強化のためのセーフガードと支援方針を表明しました。",
+    "title_ja": "OpenAI、豪政府サイト問題で謝罪と対策を発表",
+    "tags": [
+      "OpenAI",
+      "オーストラリア",
+      "セキュリティ",
+      "ガバナンス"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-29T01:44:07.070222+00:00"
+  },
+  {
     "item_id": "d70d671648ff5eac52ea3957d74835b4c044fd0c0aff73e5561da1ad89e2faae",
     "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
     "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
