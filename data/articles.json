@@ -1,5 +1,91 @@
 [
   {
+    "item_id": "edc7a34410c72b511f9898ebc0311724ef6382067c5e2e49d063dc96feb3f1b3",
+    "title": "Disrupting a coordinated model-distillation campaign",
+    "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+    "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-30T10:30:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIがモデルの推論を不正に抽出する攻撃キャンペーンを阻止し、悪意ある蒸留に対する防御を強化したことを発表。",
+    "title_ja": "OpenAI、モデル蒸留攻撃を阻止し防御を強化",
+    "tags": [
+      "OpenAI",
+      "セキュリティ",
+      "モデル蒸留"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-30T17:55:30.233740+00:00"
+  },
+  {
+    "item_id": "00b4cab4c98d3561589086a92c40b11e61b0c6423727dbff00e058b8202f0e51",
+    "title": "Helping small businesses put AI to work",
+    "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+    "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-30T10:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "America's SBDCと提携し、中小企業向けの実地的なAIトレーニングやローカルサポート、活用レポートの提供を発表。",
+    "title_ja": "OpenAI、中小企業向けのAI活用支援を拡大",
+    "tags": [
+      "OpenAI",
+      "中小企業",
+      "AI活用"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-30T17:55:30.233740+00:00"
+  },
+  {
+    "item_id": "886dd7edf44ea9acaf7fea4ce4ec13aa3bb7a41d0f82af8f01154f976911f4f8",
+    "title": "Introducing SynthID Bio",
+    "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+    "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-30T15:03:07+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "生物学的機能を維持したままAI生成タンパク質に電子透かしを埋め込む実証実験の概念を発表。",
+    "title_ja": "Google DeepMind、AI生成タンパク質用の「SynthID Bio」を発表",
+    "tags": [
+      "DeepMind",
+      "バイオAI",
+      "電子透かし",
+      "タンパク質"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-30T17:55:30.233740+00:00"
+  },
+  {
+    "item_id": "483c5ff816fb536484ade39b5e5c61e07a5853337b9d1079807a455fd885565c",
+    "title": "Sep 30, 2026EconomicsWhat work can robots do?",
+    "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+    "summary": "Sep 30, 2026EconomicsWhat work can robots do?",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-09-30T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "経済学の観点からロボットが遂行可能な労働について考察したAnthropicの研究成果。",
+    "title_ja": "ロボットが担うことのできる労働に関する研究",
+    "tags": [
+      "Anthropic",
+      "ロボット",
+      "経済",
+      "労働"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-30T17:55:30.233740+00:00"
+  },
+  {
     "item_id": "fa23b8533f7e2c3f257de4120726541addfd120aa652f335ad1e9f2c21b1d700",
     "title": "Introducing GPT-6.1 Sol",
     "url": "https://openai.com/index/introducing-gpt-6-1-sol",
