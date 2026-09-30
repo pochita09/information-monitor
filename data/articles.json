@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "fa23b8533f7e2c3f257de4120726541addfd120aa652f335ad1e9f2c21b1d700",
+    "title": "Introducing GPT-6.1 Sol",
+    "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+    "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-29T10:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "Astra並みの高度な知能を持ちながら、API料金を大幅に抑えたプロフェッショナル向けモデルが登場。",
+    "title_ja": "新型モデル「GPT-6.1 Sol」発表",
+    "tags": [
+      "GPT-6.1 Sol",
+      "OpenAI",
+      "API",
+      "AIモデル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-30T01:11:42.125764+00:00"
+  },
+  {
+    "item_id": "6cbb0c8e0bac1340fa3c1b4d8e0b41b9f6a1d48260747cfcffbaf5f65f4279db",
+    "title": "DevDay 2026 Recap",
+    "url": "https://openai.com/index/devday-2026-recap",
+    "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-09-29T10:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "DevDay 2026でのGPT-6 AstraやChatGPT、新しい開発者向けツールなど20以上の発表を紹介。",
+    "title_ja": "OpenAI DevDay 2026 発表内容まとめ",
+    "tags": [
+      "DevDay",
+      "OpenAI",
+      "ChatGPT",
+      "API"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-09-30T01:11:42.125764+00:00"
+  },
+  {
     "item_id": "3ef1ed5b44b251f78255f2fb58fbd1117f5cfb17e22f84e63b0e7c0ceb8f3a0c",
     "title": "Sep 29, 2026Frontier Red TeamGLM-5.3 and the spread of advanced cyber capabilities",
     "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
