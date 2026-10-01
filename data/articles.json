@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "a9a707466294363497e4e45370c603f88e61857315d1f60c192f40cb326985eb",
+    "title": "Gemini 4 Argon: our next era of frontier intelligence",
+    "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-09-30T20:01:45+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "次世代のフロンティア知能を持つ新しいAIモデル「Gemini 4 Argon」が発表されました。",
+    "title_ja": "Gemini 4 Argon発表",
+    "tags": [
+      "Gemini",
+      "Google",
+      "AIモデル",
+      "新機能"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-01T01:11:17.557367+00:00"
+  },
+  {
     "item_id": "edc7a34410c72b511f9898ebc0311724ef6382067c5e2e49d063dc96feb3f1b3",
     "title": "Disrupting a coordinated model-distillation campaign",
     "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
