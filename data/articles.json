@@ -1,5 +1,28 @@
 [
   {
+    "item_id": "3e0de5cbf954317fa4f8c51ebc55ec38803c7cc94d5073b1aadda5876c854922",
+    "title": "Barclays scales Claude to upgrade operations and improve client experience",
+    "url": "https://www.anthropic.com/news/barclays-scales-claude",
+    "summary": "Barclays scales Claude to upgrade operations and improve client experience",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-01T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "英バークレイズがAnthropicのClaudeを大規模導入し、業務のアップグレードと顧客体験の向上を図る。",
+    "title_ja": "バークレイズ、業務効率化と顧客体験向上に向けてClaudeを本格導入",
+    "tags": [
+      "Barclays",
+      "Claude",
+      "Anthropic",
+      "金融",
+      "企業導入"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-01T10:51:48.146104+00:00"
+  },
+  {
     "item_id": "a9a707466294363497e4e45370c603f88e61857315d1f60c192f40cb326985eb",
     "title": "Gemini 4 Argon: our next era of frontier intelligence",
     "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
