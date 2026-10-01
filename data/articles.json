@@ -1,5 +1,68 @@
 [
   {
+    "item_id": "c3b6879deb131b5c4c797b64474e38245b23f7fa176313534b393fe3cd4d5906",
+    "title": "The eternal complement",
+    "url": "https://openai.com/index/the-eternal-complement",
+    "summary": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-01T17:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "画期的なアイデアの裏にある日常業務において、高度なAIがどのように経済や進歩のペースを形作るかを考察しています。",
+    "title_ja": "高度AIがもたらす日常業務と経済への影響",
+    "tags": [
+      "AIエコノミー",
+      "労働",
+      "OpenAI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-01T18:21:18.963537+00:00"
+  },
+  {
+    "item_id": "c9e874a92fac81e41f7d43f7b3e3d4ad914b9da25497c8607f7a4438022d6c84",
+    "title": "How Albertsons Companies is reimagining retail from the inside out",
+    "url": "https://openai.com/index/albertsons-reimagining-retail",
+    "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-01T16:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "Albertsons Cos.がChatGPT EnterpriseとOpenAI APIを活用し、業務効率化と顧客サービスの向上を実現している事例を紹介しています。",
+    "title_ja": "Albertsons、ChatGPT Enterpriseで小売業務を刷新",
+    "tags": [
+      "ChatGPT Enterprise",
+      "小売",
+      "導入事例"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-01T18:21:18.963537+00:00"
+  },
+  {
+    "item_id": "2281b2d52bcf11a0d96f32a5ba71153dae99a8c456377b54c3d0b8d490c83ada",
+    "title": "Oct 1, 2026ScienceClaude-shaped science",
+    "url": "https://www.anthropic.com/research/claude-shaped-science",
+    "summary": "Oct 1, 2026ScienceClaude-shaped science",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-01T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "Anthropicが公開した、科学分野におけるClaudeの活用や研究成果に関する記事です。",
+    "title_ja": "Claudeを活用した科学研究の未来",
+    "tags": [
+      "Claude",
+      "科学",
+      "Anthropic"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-01T18:21:18.963537+00:00"
+  },
+  {
     "item_id": "3e0de5cbf954317fa4f8c51ebc55ec38803c7cc94d5073b1aadda5876c854922",
     "title": "Barclays scales Claude to upgrade operations and improve client experience",
     "url": "https://www.anthropic.com/news/barclays-scales-claude",
