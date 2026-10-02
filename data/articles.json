@@ -1,5 +1,71 @@
 [
   {
+    "item_id": "ddbe1621bcd2ef07f670b6022bfd0564f38565a0057a13f4edbc27d52207994b",
+    "title": "A model guide for the GPT-6 family",
+    "url": "https://openai.com/index/practical-guide-building-gpt-6",
+    "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-02T16:15:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "スタートアップ向けにGPT-6モデルの選択、推論の調整、プロンプト改善、ツール連携、本番ワークフローの準備を解説。",
+    "title_ja": "GPT-6ファミリー実践モデルガイド",
+    "tags": [
+      "GPT-6",
+      "OpenAI",
+      "AIモデル",
+      "開発者向け"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-02T17:48:35.243034+00:00"
+  },
+  {
+    "item_id": "eb59287ef1775583f8cce65726372d28ce713d6661c2412c32dbde2d68717dbb",
+    "title": "Chatham scales its capital markets expertise with OpenAI",
+    "url": "https://openai.com/index/chatham-financial",
+    "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-02T00:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Chatham FinancialがCodexとGPT-5.6を活用し、取引検証にかかる時間を30分未満から4分未満に短縮。",
+    "title_ja": "Chatham、OpenAI導入で業務効率化",
+    "tags": [
+      "OpenAI",
+      "導入事例",
+      "金融",
+      "業務効率化"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-02T17:48:35.243034+00:00"
+  },
+  {
+    "item_id": "e1bf4f57915499bed695192f8520061f5c64bc58dacd6071e9b61ac814e8b40d",
+    "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+    "url": "https://www.anthropic.com/news/claude-frontier-academy",
+    "summary": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-02T00:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Anthropicが1億ドルを投資し、エンタープライズAIの人材不足解消を目指して1万人のエンジニアを育成。",
+    "title_ja": "Anthropic、1億ドル投じ1万人育成へ",
+    "tags": [
+      "Anthropic",
+      "人材育成",
+      "AI人材",
+      "企業向け"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-02T17:48:35.243034+00:00"
+  },
+  {
     "item_id": "c3b6879deb131b5c4c797b64474e38245b23f7fa176313534b393fe3cd4d5906",
     "title": "The eternal complement",
     "url": "https://openai.com/index/the-eternal-complement",
