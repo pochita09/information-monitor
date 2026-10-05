@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "b240f10e8c4ad671f7eee16d063f3cde8685407d17c818f6fd145b7dc9e51dc1",
+    "title": "Our approach to EU text provenance rules",
+    "url": "https://openai.com/index/eu-text-provenance",
+    "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-05T15:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "OpenAIがEUのルールに基づくテキストのウォーターマーク導入や検出の仕組みについて方針を解説しています。",
+    "title_ja": "EUのテキスト出所規則に対するOpenAIのアプローチ",
+    "tags": [
+      "OpenAI",
+      "EU",
+      "ウォーターマーク",
+      "規制"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-05T20:30:12.561456+00:00"
+  },
+  {
+    "item_id": "b4a93b260fcb03a8d0c45ab523932d9ff27ddfbe630f40c26206ad1a1a5639fe",
+    "title": "Building advertising for the way people use AI",
+    "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+    "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-05T10:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIがChatGPT内に視覚的な広告フォーマットを導入し、測定ツールや提携関係を拡大することを発表しました。",
+    "title_ja": "ChatGPTにおける新しい広告フォーマットと計測ツールの導入",
+    "tags": [
+      "ChatGPT",
+      "広告",
+      "OpenAI",
+      "新機能"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-05T20:30:12.561456+00:00"
+  },
+  {
     "item_id": "ddbe1621bcd2ef07f670b6022bfd0564f38565a0057a13f4edbc27d52207994b",
     "title": "A model guide for the GPT-6 family",
     "url": "https://openai.com/index/practical-guide-building-gpt-6",
