@@ -1,5 +1,68 @@
 [
   {
+    "item_id": "4685947ef4dc62d2937123c6378c9edc3c298f432ce99a96c24a77b264b5ce38",
+    "title": "Helping teens learn, plan, and shape the future of AI",
+    "url": "https://openai.com/index/teens-learn-and-plan",
+    "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-07T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "十代のChatGPTユーザー向けに大学出願管理機能やフラッシュカード、クイズなどが追加されました。",
+    "title_ja": "十代向けChatGPTに受験支援機能が登場",
+    "tags": [
+      "ChatGPT",
+      "教育",
+      "新機能"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-07T18:47:56.017881+00:00"
+  },
+  {
+    "item_id": "a7ae0169ffe13c09edeeb05ba249ca0d00a9a0fdf94bdb1a464d10876b71147d",
+    "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+    "url": "https://openai.com/index/radisson",
+    "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-07T07:00:00+00:00",
+    "category": "新機能",
+    "importance": "中",
+    "score": 8,
+    "summary_ja": "アクセンチュアと協力し、旅行者がChatGPT上でホテルの検索や比較、予約を行えるプラグインを導入しました。",
+    "title_ja": "ラディソンホテルがChatGPT連携を開始",
+    "tags": [
+      "ChatGPT",
+      "API",
+      "旅行"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-07T18:47:56.017881+00:00"
+  },
+  {
+    "item_id": "25c0ebbaa3ca41fc1a43975b4989677698273915017c19ecbb8c8b471e85479f",
+    "title": "GPT-6 and Intelligent UI for everyone",
+    "url": "https://openai.com/index/gpt-6-for-everyone",
+    "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-07T00:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "高速な応答と視覚的でインタラクティブな体験を提供するGPT-6とインテリジェントUIが世界中で順次展開されます。",
+    "title_ja": "GPT-6と新UIがグローバル展開開始",
+    "tags": [
+      "GPT-6",
+      "新モデル",
+      "UI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-07T18:47:56.017881+00:00"
+  },
+  {
     "item_id": "ab86f8ecc93cb16d7cbb63a84c6addd1fd20fb8229becd737b0bc629314a1b55",
     "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
     "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
