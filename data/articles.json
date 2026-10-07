@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "ab86f8ecc93cb16d7cbb63a84c6addd1fd20fb8229becd737b0bc629314a1b55",
+    "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+    "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-06T19:57:04+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Google DeepMindが軽量でオープンなマルチモーダル埋め込みモデル「EmbeddingGemma 2」を発表しました。",
+    "title_ja": "EmbeddingGemma 2公開",
+    "tags": [
+      "Google",
+      "DeepMind",
+      "EmbeddingGemma",
+      "マルチモーダル",
+      "オープンソース"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-07T01:22:21.604537+00:00"
+  },
+  {
+    "item_id": "5655e604726d214055655b80b70ba75258227d9753673118bbbde74ec44d0fbe",
+    "title": "Expanding the Cyber Verification Program",
+    "url": "https://www.anthropic.com/news/cyber-verification-program",
+    "summary": "Expanding the Cyber Verification Program",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-06T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "Anthropicがサイバー検証プログラムの拡大について発表しました。",
+    "title_ja": "サイバー検証プログラムの拡大",
+    "tags": [
+      "Anthropic",
+      "セキュリティ",
+      "サイバーセキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-07T01:22:21.604537+00:00"
+  },
+  {
     "item_id": "4b673075ffa51639f652e20dd552841a886595b43e36f63a626aa4f1db063787",
     "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
     "url": "https://openai.com/index/atlassian-partnership",
