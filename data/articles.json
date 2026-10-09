@@ -1,5 +1,197 @@
 [
   {
+    "item_id": "eb2a7bb251f1f9993d63d04442945712ecc5a81435c2564303d8b07cb8353afe",
+    "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+    "url": "https://openai.com/index/oracle",
+    "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T16:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "OracleはChatGPT WorkとCodexを活用し、採用やエンジニアリングなどの業務を迅速なワークフローへと変革しています。",
+    "title_ja": "OracleがChatGPTとCodexで業務を効率化",
+    "tags": [
+      "Oracle",
+      "ChatGPT",
+      "Codex",
+      "業務効率化"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "654fd69637374513a454da14e763c6715c361402739672456135fbc351c59642",
+    "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+    "url": "https://openai.com/index/pollo-ai",
+    "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T12:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "Pollo AIは新しいモデル群を活用し、クリエイターのアイデアを詳細な画像や映像広告へと昇華させています。",
+    "title_ja": "Pollo AI、OpenAIの最新モデルでキャンペーン制作",
+    "tags": [
+      "Pollo AI",
+      "OpenAI",
+      "画像生成",
+      "動画広告"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "c1cd3f5dc9b8422bf90f885ded71afeccdbb1d4d2593601ba13d1c331abd4c1e",
+    "title": "LegalOn halves Codex costs while maintaining development speed",
+    "url": "https://openai.com/index/legalon-halves-codex-costs",
+    "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T12:00:00+00:00",
+    "category": "価格改定",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "LegalOnは開発速度を維持したまま、Codexの推定日次コストを65%削減することに成功しました。",
+    "title_ja": "LegalOnがCodexのコストを半減",
+    "tags": [
+      "LegalOn",
+      "Codex",
+      "コスト削減"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "b8c236ee55eea8c3479f68ba2cfed9792abec653617b866d7485c2f7ad632321",
+    "title": "Disrupting AI-enabled “false front” operations",
+    "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+    "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIは、偽のジャーナリストなどを使ったAIによる地政学的影響力工作の試みを阻止しました。",
+    "title_ja": "AIを用いた偽装工作オペレーションの阻止",
+    "tags": [
+      "セキュリティ",
+      "AI悪用対策",
+      "OpenAI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "6e337820be30f01d8252da97a081411777333a9d9ce05ce4362e08eaaa180ba7",
+    "title": "Building on our commitment to American scientific discovery",
+    "url": "https://www.anthropic.com/news/genesis-mission-commitment",
+    "summary": "Building on our commitment to American scientific discovery",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "米国の科学的発見を推進するための継続的なコミットメントに関する発表です。",
+    "title_ja": "米国の科学的発見に向けた取り組み",
+    "tags": [
+      "Anthropic",
+      "科学発見",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "7a351879cb5067594016807effb2cf241994e7a779301b4ccee9e9aa8e98f0bf",
+    "title": "Introducing the Anthropic Cyber Mission",
+    "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+    "summary": "Introducing the Anthropic Cyber Mission",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 7,
+    "summary_ja": "サイバーセキュリティ分野に特化したAnthropicサイバーミッションが新たに発表されました。",
+    "title_ja": "Anthropicサイバーミッションの発表",
+    "tags": [
+      "Anthropic",
+      "サイバーセキュリティ",
+      "AI安全"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "16a2b209b22010edd47270ab903787854082a52430b27be30ea7cca5d318533b",
+    "title": "2026 Usage Policy update",
+    "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+    "summary": "2026 Usage Policy update",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-08T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "2026年版の利用規約の更新に関する情報です。",
+    "title_ja": "2026年利用規約のアップデート",
+    "tags": [
+      "Anthropic",
+      "利用規約",
+      "ポリシー"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "eabb686e72be7f0e6a28baee94e40b0e1fadc9427ab682454ba5c4a292dc6e9d",
+    "title": "The missing map of the sky",
+    "url": "https://www.anthropic.com/research/the-missing-map-of-the-sky",
+    "summary": "The missing map of the sky",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-08T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "天空の地図に関するAnthropicの研究成果についてのレポートです。",
+    "title_ja": "見失われた天空の地図",
+    "tags": [
+      "Anthropic",
+      "研究",
+      "天文学"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
+    "item_id": "361916871fbe1029a012af73cd8fe749d7ccab3fcf0451456ed78e8b40f88756",
+    "title": "Launching an opt-in vulnerability-finding service for open-source software",
+    "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+    "summary": "Launching an opt-in vulnerability-finding service for open-source software",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-08T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "オープンソースソフトウェアを対象とした、オプトイン方式の脆弱性発見サービスが開始されました。",
+    "title_ja": "オープンソース向けの脆弱性検出サービス",
+    "tags": [
+      "Anthropic",
+      "オープンソース",
+      "脆弱性検出",
+      "セキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T01:55:58.268092+00:00"
+  },
+  {
     "item_id": "4685947ef4dc62d2937123c6378c9edc3c298f432ce99a96c24a77b264b5ce38",
     "title": "Helping teens learn, plan, and shape the future of AI",
     "url": "https://openai.com/index/teens-learn-and-plan",
