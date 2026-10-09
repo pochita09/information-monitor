@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "663bdf1a7f7336bb613c9700efaaa593237c0685e93e08b6158f7411b1772c78",
+    "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+    "url": "https://openai.com/index/sophos",
+    "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-09T07:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "SophosがOpenAIの技術を利用し、サイバー脅威の調査時間を96%削減しつつMDR案件の52%を自動化しました。",
+    "title_ja": "Sophos、OpenAI活用で脅威調査時間を96%削減",
+    "tags": [
+      "OpenAI",
+      "セキュリティ",
+      "AI活用",
+      "自動化"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-09T11:14:50.304948+00:00"
+  },
+  {
     "item_id": "eb2a7bb251f1f9993d63d04442945712ecc5a81435c2564303d8b07cb8353afe",
     "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
     "url": "https://openai.com/index/oracle",
