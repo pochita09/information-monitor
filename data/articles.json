@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "c319c56afb31bbab6c55ebb1e997507d35a4d0dd82e311f84b7239115c79c117",
+    "title": "Investigating unintended model actions in our evaluations and internal use",
+    "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+    "summary": "Investigating unintended model actions in our evaluations and internal use",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-09T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "Anthropicが評価および内部利用におけるモデルの意図しない動作についての調査結果を公開しました。",
+    "title_ja": "モデルの予期せぬ動作に関する調査と内部評価",
+    "tags": [
+      "Anthropic",
+      "AI安全性",
+      "モデル評価",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-10T01:38:38.008673+00:00"
+  },
+  {
     "item_id": "663bdf1a7f7336bb613c9700efaaa593237c0685e93e08b6158f7411b1772c78",
     "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
     "url": "https://openai.com/index/sophos",
