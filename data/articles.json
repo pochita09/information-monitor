@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "ceb04916a2ec7c9d8be527d85add1eb28e57a7d944bd977f43b71f26698525f7",
+    "title": "AI models may be capable of self-replicating without access to a datacenter",
+    "url": "https://www.anthropic.com/research/self-replicating-ai",
+    "summary": "AI models may be capable of self-replicating without access to a datacenter",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-12T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "データセンターにアクセスせずともAIが自己複製を行う可能性についての研究成果が発表されました。",
+    "title_ja": "AIの自己複製リスクに関する研究発表",
+    "tags": [
+      "AI",
+      "安全性",
+      "研究",
+      "自己複製"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-12T21:11:22.666210+00:00"
+  },
+  {
     "item_id": "c319c56afb31bbab6c55ebb1e997507d35a4d0dd82e311f84b7239115c79c117",
     "title": "Investigating unintended model actions in our evaluations and internal use",
     "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
