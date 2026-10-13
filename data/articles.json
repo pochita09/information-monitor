@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "8d63340ae5850ef49cb35f442c7e99b83184e678bb12b29ec4cfd6e45ce49602",
+    "title": "Higgsfield takes AI video from 1 minute to over 10",
+    "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+    "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-13T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "HiggsfieldがGPT-6 Astraなどを活用し、1分から10分超への長尺AI動画生成や音声対応の映像制作機能を発表しました。",
+    "title_ja": "Higgsfield、10分超のAI動画生成と新モデルを発表",
+    "tags": [
+      "AI動画",
+      "Higgsfield",
+      "GPT-6",
+      "動画生成"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-13T19:10:22.765067+00:00"
+  },
+  {
     "item_id": "ceb04916a2ec7c9d8be527d85add1eb28e57a7d944bd977f43b71f26698525f7",
     "title": "AI models may be capable of self-replicating without access to a datacenter",
     "url": "https://www.anthropic.com/research/self-replicating-ai",
