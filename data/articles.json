@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "1bab5a6754a31bef0657a633284a31f7aa3c79ad454bb938f58171946b0edb05",
+    "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+    "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+    "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-14T02:00:14+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Google DeepMindとシンガポール政府が連携し、軽量なGemmaモデルを活用した詐欺検出機能を開発しました。",
+    "title_ja": "Google、詐欺検出向けオンデバイスAIを開発",
+    "tags": [
+      "Google DeepMind",
+      "Gemma",
+      "オンデバイスAI",
+      "セキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T09:25:09.049130+00:00"
+  },
+  {
+    "item_id": "36705489290fb2f9949971354afbf2ea9a4866948b94d91e51713caa8f28ffe8",
+    "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+    "url": "https://www.anthropic.com/news/singapore-office-opening",
+    "summary": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-14T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "Anthropicがシンガポールにオフィスを開設し、シンガポール政府とMOUを締結しました。",
+    "title_ja": "Anthropic、シンガポールオフィス開設",
+    "tags": [
+      "Anthropic",
+      "シンガポール",
+      "ビジネス",
+      "グローバル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T09:25:09.049130+00:00"
+  },
+  {
     "item_id": "482790270040be8f157922731978e0e3c72dcdc124396af47f9c683973e211ac",
     "title": "Developing Gemini 4 Argon responsibly and safely",
     "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
