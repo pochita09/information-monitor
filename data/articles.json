@@ -1,5 +1,68 @@
 [
   {
+    "item_id": "dbdd783fe8ba095ac83296283518e83b8a3905e9d076a399a0f3e72e03b85394",
+    "title": "Amp puts AI agents to work beyond code with OpenAI models",
+    "url": "https://openai.com/index/amp-beyond-coding",
+    "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-14T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "GPT-6 AstraやUltrafastなどを活用し、AIエージェントの活用範囲をコード作成以外へと拡大する取り組みを紹介。",
+    "title_ja": "OpenAIモデルでコード以外も動かすAmp",
+    "tags": [
+      "OpenAI",
+      "AIエージェント",
+      "GPT-6"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T16:59:36.548459+00:00"
+  },
+  {
+    "item_id": "43312afa10af21c94c9a0de6d1dc2b4829d1138b672a34b5aaf800674e4f8a84",
+    "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+    "url": "https://openai.com/index/third-moment-research",
+    "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-14T07:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Third Moment ResearchがGPT-6を活用し、数日間稼働して自己改善するAIエージェントの運用事例を公開。",
+    "title_ja": "36時間超・1万エージェントを運用する手法",
+    "tags": [
+      "AIエージェント",
+      "サイバーセキュリティ",
+      "研究事例"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T16:59:36.548459+00:00"
+  },
+  {
+    "item_id": "c851340a399faefc62aca580d06b3bb0cfa4309715b2a63975f7521e1dda9efa",
+    "title": "The EU’s next chapter in AI is agentic",
+    "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+    "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-14T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 8,
+    "summary_ja": "EUの企業や中小企業におけるエージェント型AIの採用状況と、さらなる価値創出に向けた分析結果を解説。",
+    "title_ja": "EUにおけるエージェント型AIの普及動向",
+    "tags": [
+      "EU",
+      "AI普及",
+      "ビジネス"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T16:59:36.548459+00:00"
+  },
+  {
     "item_id": "1bab5a6754a31bef0657a633284a31f7aa3c79ad454bb938f58171946b0edb05",
     "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
     "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
