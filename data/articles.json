@@ -1,5 +1,68 @@
 [
   {
+    "item_id": "482790270040be8f157922731978e0e3c72dcdc124396af47f9c683973e211ac",
+    "title": "Developing Gemini 4 Argon responsibly and safely",
+    "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-13T19:43:07+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "Gemini 4 Argonモデルの安全で責任ある開発アプローチについて解説しています。",
+    "title_ja": "Gemini 4 Argonの安全性と責任ある開発",
+    "tags": [
+      "Gemini",
+      "AI安全性",
+      "Google DeepMind"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T01:03:35.166847+00:00"
+  },
+  {
+    "item_id": "e4f3c96e8502219c9e99848413332a2835d6ee5c8a8e67142e4adcefbff49e74",
+    "title": "Gemini 4 Argon for Robotics",
+    "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-13T16:01:58+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "ロボット工学分野におけるGemini 4 Argonの活用事例や特徴を紹介しています。",
+    "title_ja": "ロボット工学向けGemini 4 Argon",
+    "tags": [
+      "Gemini",
+      "ロボティクス",
+      "Google DeepMind"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T01:03:35.166847+00:00"
+  },
+  {
+    "item_id": "6a105f41f6dfd20f4260107fe38b15979857d2f58b9ab59c3e0854636b9e3500",
+    "title": "Gemini 4 Argon: Built to solve your hardest problems",
+    "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+    "summary": "",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-13T16:01:52+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 10,
+    "summary_ja": "最も困難な問題の解決を目的として構築された新しいAIモデル「Gemini 4 Argon」を発表しました。",
+    "title_ja": "難問解決に特化したGemini 4 Argonの発表",
+    "tags": [
+      "Gemini",
+      "新モデル",
+      "Google DeepMind"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-14T01:03:35.166847+00:00"
+  },
+  {
     "item_id": "8d63340ae5850ef49cb35f442c7e99b83184e678bb12b29ec4cfd6e45ce49602",
     "title": "Higgsfield takes AI video from 1 minute to over 10",
     "url": "https://openai.com/index/higgsfield-longer-videos-voice",
