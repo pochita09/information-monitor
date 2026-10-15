@@ -1,5 +1,48 @@
 [
   {
+    "item_id": "7e4bf2a2efdb6c94d45d5fd9fe2a08815dc83ff35eb6fc58809addd1db96e685",
+    "title": "Teaching students to think and learn through questions",
+    "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+    "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-15T13:00:00+00:00",
+    "category": "新機能",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "ブラジルポルトガル語での教育者向けAI機能の提供開始や、ステップ別の学習を支援するスタディモードの活用について紹介。",
+    "title_ja": "AIを活用した教育手法と教師向け新機能の展開",
+    "tags": [
+      "教育",
+      "OpenAI",
+      "スタディモード"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-15T16:46:57.175973+00:00"
+  },
+  {
+    "item_id": "234fede249e7c12dea0dcea454423b947fa6a467161208a4a4847c69ed95bd95",
+    "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+    "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+    "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-15T16:08:03+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Google Antigravity for Scienceを活用し、新規の抗菌ペプチドの探索を加速させる取り組みについて解説。",
+    "title_ja": "Googleの科学技術による抗菌ペプチド探索の加速",
+    "tags": [
+      "Google",
+      "創薬",
+      "バイオAI",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-15T16:46:57.175973+00:00"
+  },
+  {
     "item_id": "dbdd783fe8ba095ac83296283518e83b8a3905e9d076a399a0f3e72e03b85394",
     "title": "Amp puts AI agents to work beyond code with OpenAI models",
     "url": "https://openai.com/index/amp-beyond-coding",
