@@ -1,5 +1,48 @@
 [
   {
+    "item_id": "ef10996abb26838333bfcaad304ee59ece0faac4c34a07678b8c2b9b3fbe6141",
+    "title": "Bringing GPT-Rosalind to academic research labs",
+    "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+    "summary": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-15T19:00:00+00:00",
+    "category": "新モデル",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "生命科学の研究を進めるため、対象となる学術研究室にGPT-Rosalindやツールのスポンサー付きアクセスを提供する計画を発表しました。",
+    "title_ja": "生命科学向けGPT-Rosalindを研究室へ提供開始",
+    "tags": [
+      "GPT-Rosalind",
+      "生命科学",
+      "OpenAI",
+      "研究支援"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-16T00:13:23.207126+00:00"
+  },
+  {
+    "item_id": "e1ee365abe6bb6a4c8f49c92667945956cebaed31ff387087c792a27c23cefe7",
+    "title": "An update on independent evaluators",
+    "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+    "summary": "An update on independent evaluators",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "AIモデルの安全性や性能を検証する独立系評価者に関するアップデート情報が公開されました。",
+    "title_ja": "独立系評価者に関する最新情報",
+    "tags": [
+      "Anthropic",
+      "安全性",
+      "評価"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-16T00:13:23.207126+00:00"
+  },
+  {
     "item_id": "7e4bf2a2efdb6c94d45d5fd9fe2a08815dc83ff35eb6fc58809addd1db96e685",
     "title": "Teaching students to think and learn through questions",
     "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
