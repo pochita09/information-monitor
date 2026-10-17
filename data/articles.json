@@ -1,5 +1,156 @@
 [
   {
+    "item_id": "7b2230791128a9cdd7053d9985b4cf494030f9f2ff717ff2c763bc9a2a831612",
+    "title": "How Itaú is building generative AI for its entire customer base",
+    "url": "https://openai.com/index/itau-generative-ai",
+    "summary": "With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-16T19:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "ブラジルの規制が厳しい金融セクターにおいて、Itaú銀行が顧客と従業員向けに生成AI戦略を推進している事例。",
+    "title_ja": "ブラジルの銀行Itaú、全顧客向け生成AI展開",
+    "tags": [
+      "生成AI",
+      "金融",
+      "OpenAI",
+      "ガバナンス"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
+    "item_id": "13bd12f9aeed6df7a83423313eac6c48589b689db273062f678f7b4067f2f3aa",
+    "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+    "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+    "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "Codexを活用して数週間で構築されたエージェント向けプラットフォームが、ChatGPTプラグインにより成長を遂げた。",
+    "title_ja": "エージェント用Stack Overflow、ChatGPTプラグインで登録急増",
+    "tags": [
+      "ChatGPT",
+      "プラグイン",
+      "開発者",
+      "API"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
+    "item_id": "02b3524ae241a48f247e0c627cbf9b090f7511b5b4c92cd2d7a4ca0d7a789d12",
+    "title": "Working at the frontier shapes expectations for the future",
+    "url": "https://www.anthropic.com/research/expectations-for-the-future",
+    "summary": "Working at the frontier shapes expectations for the future",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "AIの最先端で働くことが、未来に対する期待や見通しにどのような影響を与えるかについての考察。",
+    "title_ja": "AI最前線での業務が将来の期待を形作る",
+    "tags": [
+      "Anthropic",
+      "研究",
+      "未来予測"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
+    "item_id": "07ff42b52d9f8ccf8ad85d2eff84eb49f2f60066fe9d6dcafb7fcdad9c41e6a8",
+    "title": "How employment is changing at Anthropic",
+    "url": "https://www.anthropic.com/research/employment-at-anthropic",
+    "summary": "How employment is changing at Anthropic",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 5,
+    "summary_ja": "AI開発企業Anthropic社内における雇用の変化や動向についてのレポート。",
+    "title_ja": "Anthropicにおける雇用の変化",
+    "tags": [
+      "Anthropic",
+      "雇用",
+      "キャリア"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
+    "item_id": "53fb9b9e3e824fbdd5827c064afb87d0d8d806b1cb9e37020f4b6efe245f531c",
+    "title": "Claude reveals ECDSA curve origins",
+    "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+    "summary": "Claude reveals ECDSA curve origins",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "AIモデルのClaudeを活用して、暗号技術におけるECDSA曲線の起源に関する調査結果が明らかにされた。",
+    "title_ja": "Claudeが明かすECDSA曲線の起源",
+    "tags": [
+      "Claude",
+      "暗号技術",
+      "セキュリティ",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
+    "item_id": "8aa8d66d3f4e995259657a586ea9108067d26cabb8bb8176ef9a061b3edad185",
+    "title": "Designing more efficient quantum circuits with Claude",
+    "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+    "summary": "Designing more efficient quantum circuits with Claude",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "Claudeを用いて、より効率的な量子回路を設計する手法についての研究成果。",
+    "title_ja": "Claudeを活用した効率的な量子回路の設計",
+    "tags": [
+      "Claude",
+      "量子コンピュータ",
+      "回路設計",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
+    "item_id": "31793aa5db0b03436cb9c6db14af54e7408bda8abf4a0b047e4b83bfd6815433",
+    "title": "The AI expectations gap",
+    "url": "https://www.anthropic.com/research/ai-expectations-gap",
+    "summary": "The AI expectations gap",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "社会がAIに抱く期待と、実際の技術的現実の間にあるギャップについての洞察。",
+    "title_ja": "AIへの期待におけるギャップの分析",
+    "tags": [
+      "Anthropic",
+      "AI",
+      "考察"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-17T00:16:11.379308+00:00"
+  },
+  {
     "item_id": "ef10996abb26838333bfcaad304ee59ece0faac4c34a07678b8c2b9b3fbe6141",
     "title": "Bringing GPT-Rosalind to academic research labs",
     "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
