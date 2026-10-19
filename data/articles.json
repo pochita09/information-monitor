@@ -1,5 +1,26 @@
 [
   {
+    "item_id": "d15c7142f9d271496b3f997608a06534638e83960db1eff3b8319d73369da55f",
+    "title": "Investing in the public benefit",
+    "url": "https://www.anthropic.com/news/public-benefit-fund",
+    "summary": "Investing in the public benefit",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-18T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "Anthropicが公共の利益を目的とした投資や取り組みについて発表しました。",
+    "title_ja": "Anthropicが公共の利益に向けた投資を発表",
+    "tags": [
+      "Anthropic",
+      "公共利益",
+      "企業動向"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-19T00:04:59.301674+00:00"
+  },
+  {
     "item_id": "7b2230791128a9cdd7053d9985b4cf494030f9f2ff717ff2c763bc9a2a831612",
     "title": "How Itaú is building generative AI for its entire customer base",
     "url": "https://openai.com/index/itau-generative-ai",
