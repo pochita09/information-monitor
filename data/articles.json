@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "eed7f308a6090683a1adf38c6a68f578ab583a02978c0421e7bbbe60658ea1d3",
+    "title": "How Claude designed protein binders against scorpion neurotoxins",
+    "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+    "summary": "How Claude designed protein binders against scorpion neurotoxins",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "AnthropicのClaudeを用いて、サソリの神経毒に対する結合タンパク質の設計に成功した研究成果が発表されました。",
+    "title_ja": "Claudeを活用したサソリ毒への結合タンパク質設計",
+    "tags": [
+      "Claude",
+      "バイオテクノロジー",
+      "タンパク質設計",
+      "研究成果"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-20T16:45:17.238155+00:00"
+  },
+  {
     "item_id": "df6e800373489a2f969144622d3a523af5ec58d966f6db66ba1dc97fa6b9b260",
     "title": "Advancing coding in low‑resource programming languages",
     "url": "https://openai.com/index/low-resource-programming-languages",
