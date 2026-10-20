@@ -1,5 +1,27 @@
 [
   {
+    "item_id": "df6e800373489a2f969144622d3a523af5ec58d966f6db66ba1dc97fa6b9b260",
+    "title": "Advancing coding in low‑resource programming languages",
+    "url": "https://openai.com/index/low-resource-programming-languages",
+    "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-19T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIがChatGPTにおけるCOBOLやSQLiteなどの低リソースプログラミング言語の支援機能を強化しました。",
+    "title_ja": "低リソース言語のコーディング性能向上",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "プログラミング",
+      "COBOL"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-20T01:00:46.039416+00:00"
+  },
+  {
     "item_id": "d15c7142f9d271496b3f997608a06534638e83960db1eff3b8319d73369da55f",
     "title": "Investing in the public benefit",
     "url": "https://www.anthropic.com/news/public-benefit-fund",
