@@ -1,5 +1,50 @@
 [
   {
+    "item_id": "e1cb5f907409395ee7aa28b58161df9773c680bf1c2a515338596883ef694a46",
+    "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+    "url": "https://openai.com/index/ted-taylor-restaurant",
+    "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-20T10:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 8,
+    "summary_ja": "フランチャイズ加盟店がChatGPTを活用し、現金照合時間を94%削減、メニュー価格改定を95%効率化しました。",
+    "title_ja": "ChatGPTで業務時間を大幅短縮",
+    "tags": [
+      "ChatGPT",
+      "業務効率化",
+      "OpenAI",
+      "事例"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T00:29:44.898369+00:00"
+  },
+  {
+    "item_id": "6af86c07201f06f56e2489b4cecda4bea87df3c3fc043edd2febb072465bf6c4",
+    "title": "OpenAI acquires Orchestra Bio",
+    "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+    "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&amp;D, helping biopharma teams accelerate drug development and advance new treatments.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "ライフサイエンスの研究開発をAIで加速するため、OpenAIがOrchestra Bioを買収しました。",
+    "title_ja": "OpenAI、バイオ企業Orchestra Bioを買収",
+    "tags": [
+      "OpenAI",
+      "買収",
+      "ライフサイエンス",
+      "創薬",
+      "AI"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T00:29:44.898369+00:00"
+  },
+  {
     "item_id": "eed7f308a6090683a1adf38c6a68f578ab583a02978c0421e7bbbe60658ea1d3",
     "title": "How Claude designed protein binders against scorpion neurotoxins",
     "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
