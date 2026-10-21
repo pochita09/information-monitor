@@ -1,5 +1,132 @@
 [
   {
+    "item_id": "4bd0b61a287e18fefee539dd6b0a99f47acc80c1f8818f4d957680a291889671",
+    "title": "OpenAI models are coming to Google Cloud",
+    "url": "https://openai.com/index/openai-models-google-cloud",
+    "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T12:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "OpenAIのフロンティアモデルとCodexワークフローがGoogle Cloud MarketplaceおよびModel Gardenで利用可能に。",
+    "title_ja": "Google CloudでOpenAIモデル提供開始",
+    "tags": [
+      "OpenAI",
+      "Google Cloud",
+      "API",
+      "モデル"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T17:01:55.120219+00:00"
+  },
+  {
+    "item_id": "131066b67f87e505280e9f2204d7a80059e0c3c1447dbe7146ce1fce38116c31",
+    "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+    "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+    "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T07:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "オープンソースの重大な脆弱性に対処するため、研究者やインシデント対応者を繋ぐ「Patch The Planet」が発表されました。",
+    "title_ja": "AIを活用した脆弱性対応の国際連携基盤",
+    "tags": [
+      "セキュリティ",
+      "オープンソース",
+      "脆弱性"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T17:01:55.120219+00:00"
+  },
+  {
+    "item_id": "687d7a8dcf19b825a6f1c6458d07fccebed238c5438ac29ff1953ba535546463",
+    "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+    "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+    "summary": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T13:00:00+00:00",
+    "category": "新機能",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "10万以上の広告主が利用するChatGPT Adsが新たに26カ国へ拡大し、より多くの地域でリーチが可能に。",
+    "title_ja": "ChatGPT広告が26カ国へ拡大",
+    "tags": [
+      "ChatGPT",
+      "広告",
+      "ビジネス"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T17:01:55.120219+00:00"
+  },
+  {
+    "item_id": "c74fe2d8fc4e46cedb6d2ce829f63f7814d9f3861a97498eb331a8da21bf77af",
+    "title": "Using thousands of AI agents to uncover new leads in biological data",
+    "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+    "summary": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T04:50:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "数百万の脳細胞データから有望な研究の手がかりを見つけ出すため、分散型AIエージェントを活用した研究成果が公開されました。",
+    "title_ja": "数千のAIエージェントで生物学的データを解析",
+    "tags": [
+      "AIエージェント",
+      "バイオ",
+      "研究"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T17:01:55.120219+00:00"
+  },
+  {
+    "item_id": "2ebe312263334293d14b9783c121ffe8c41b0b584538bc430fe122da5604fced",
+    "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
+    "url": "https://openai.com/index/building-chatgpt-ad-stack",
+    "summary": "Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T07:00:00+00:00",
+    "category": "その他",
+    "importance": "低",
+    "score": 5,
+    "summary_ja": "会話の意図を理解し、回答と広告を分離して関連性の高い広告を大規模に配信するための新しい広告スタックの構築背景が紹介されています。",
+    "title_ja": "ChatGPTの広告基盤の仕組み",
+    "tags": [
+      "ChatGPT",
+      "広告",
+      "LLM"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T17:01:55.120219+00:00"
+  },
+  {
+    "item_id": "715ef687ef25fe38e3b23a450fd21f8c03b31ac3d1b1df82463ba34140660947",
+    "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+    "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+    "summary": "Dr. Christopher Stubbs, an experimental physicist and former Dean of Science at Harvard University, has joined Anthropic’s Long-Term Benefit Trust. He brings to the Trust decades of scientific expertise across observational cosmology and precision measurement.",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T00:00:00+00:00",
+    "category": "その他",
+    "importance": "低",
+    "score": 4,
+    "summary_ja": "ハーバード大学の前科学部長で実験物理学者のクリストファー・スタッブス氏が、Anthropicの長期利益信託に加わりました。",
+    "title_ja": "Anthropicの信託委員会に物理学者クリストファー・スタッブス氏が就任",
+    "tags": [
+      "Anthropic",
+      "ガバナンス",
+      "人事"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-21T17:01:55.120219+00:00"
+  },
+  {
     "item_id": "e1cb5f907409395ee7aa28b58161df9773c680bf1c2a515338596883ef694a46",
     "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
     "url": "https://openai.com/index/ted-taylor-restaurant",
