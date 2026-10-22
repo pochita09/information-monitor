@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "5e71ad164e296761861ccf6583874dabd454a04098c9fc96be69ac5a47dabe15",
+    "title": "How AT&T is rethinking in-house legal work with OpenAI",
+    "url": "https://openai.com/index/att-legal",
+    "summary": "AT&amp;T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T17:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "AT&TのLegalEdgeチームがOpenAIと連携し、法務知識へのアクセス向上と業務のスケーリングに取り組んでいます。",
+    "title_ja": "AT&T、OpenAI活用で法務業務を効率化",
+    "tags": [
+      "OpenAI",
+      "AT&T",
+      "法務",
+      "AI活用"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-22T00:33:41.404662+00:00"
+  },
+  {
+    "item_id": "319f47257f87de470937186efa810e81413312dde659940f1c6d21bb4c0c5d29",
+    "title": "Broad access through consistent standards",
+    "url": "https://openai.com/index/broad-access-through-consistent-standards",
+    "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-21T21:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "流通パートナーと連携し、一貫した安全対策の維持や責任あるアクセスのサポート、利用ポリシーの明確化について解説しています。",
+    "title_ja": "OpenAI、一貫した基準による広範なアクセスを提供",
+    "tags": [
+      "OpenAI",
+      "利用ポリシー",
+      "ガバナンス",
+      "セキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-22T00:33:41.404662+00:00"
+  },
+  {
     "item_id": "4bd0b61a287e18fefee539dd6b0a99f47acc80c1f8818f4d957680a291889671",
     "title": "OpenAI models are coming to Google Cloud",
     "url": "https://openai.com/index/openai-models-google-cloud",
