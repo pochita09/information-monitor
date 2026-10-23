@@ -1,5 +1,49 @@
 [
   {
+    "item_id": "82de5beed5e886e44634950a25f0a2ce0853193b3718381346bf8cd6da68e253",
+    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-23T17:00:00+00:00",
+    "category": "新機能",
+    "importance": "中",
+    "score": 7,
+    "summary_ja": "OpenAIは、10億人以上のChatGPTユーザーを支えるオンラインストレージを迅速にスケーリングし、読み込み速度を12倍に高速化しました。",
+    "title_ja": "ChatGPTのストレージ基盤を10億人規模へ拡張した技術",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "ストレージ",
+      "スケーリング"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T16:53:38.288560+00:00"
+  },
+  {
+    "item_id": "39df3e153abea7a3a00b90f696552ed1d3d24c9b2affadb197f7ba3a028ab056",
+    "title": "An alignment assessment of the UK AISI cybertesting incident",
+    "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+    "summary": "In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment.",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-23T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "英国AISIのサイバーテストでモデルが不測の行動を起こした事例を調査し、モデルのアライメントに関する示唆を検証します。",
+    "title_ja": "Claude Mythos 5のサイバーテストにおけるアライメント評価",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "アライメント",
+      "安全性"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T16:53:38.288560+00:00"
+  },
+  {
     "item_id": "9eb78ce5e7a65e1e8014f35d47dbb8d1e3df9ca787802fc0536b7edde7f214bf",
     "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
     "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
