@@ -1,5 +1,26 @@
 [
   {
+    "item_id": "9eb78ce5e7a65e1e8014f35d47dbb8d1e3df9ca787802fc0536b7edde7f214bf",
+    "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+    "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+    "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-23T00:00:00+00:00",
+    "category": "その他",
+    "importance": "中",
+    "score": 6,
+    "summary_ja": "OpenAIとポーランドのNASKがAIの安全性と技術研究で提携し、強固なデジタルエコシステム構築を支援します。",
+    "title_ja": "OpenAI、ポーランドNASKとAI安全性で提携",
+    "tags": [
+      "OpenAI",
+      "AI安全性",
+      "提携"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T09:14:48.844839+00:00"
+  },
+  {
     "item_id": "6638a03ad603587ad401310de8e5549d71fb2844a16774a00a6fcfc297d9e507",
     "title": "Build more responsive apps with the Decisions API",
     "url": "https://openai.com/index/decisions-api",
