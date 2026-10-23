@@ -1,5 +1,152 @@
 [
   {
+    "item_id": "6638a03ad603587ad401310de8e5549d71fb2844a16774a00a6fcfc297d9e507",
+    "title": "Build more responsive apps with the Decisions API",
+    "url": "https://openai.com/index/decisions-api",
+    "summary": "Fast, focused, low-cost decisions for any application.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-22T19:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "アプリケーション向けに高速かつ低コストで判断処理を行うDecisions APIが発表されました。",
+    "title_ja": "OpenAI、Decisions APIを発表",
+    "tags": [
+      "OpenAI",
+      "API",
+      "開発者向け"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
+    "item_id": "a9b0c7f7e9383ad90ba72567d2ac59dd4978c0ff7ea19c495ea99f43bf3bd64d",
+    "title": "What FDE means at OpenAI",
+    "url": "https://openai.com/index/forward-deployed-engineering-means",
+    "summary": "What forward deployed engineering means at OpenAI",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-22T06:00:00+00:00",
+    "category": "その他",
+    "importance": "低",
+    "score": 3,
+    "summary_ja": "OpenAIにおけるForward Deployed Engineering（FDE）の役割や意味について紹介しています。",
+    "title_ja": "OpenAIのFDEに関する解説",
+    "tags": [
+      "OpenAI",
+      "エンジニアリング"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
+    "item_id": "57ffcc07d2599df1f0fa85c7c6d61a971fd8e903717dda7e158ffc42022b0898",
+    "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+    "url": "https://openai.com/index/uber-chatgpt-work-rollout",
+    "summary": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
+    "source": "OpenAI News",
+    "channel": "RSS",
+    "published_at": "2026-10-22T00:00:00+00:00",
+    "category": "その他",
+    "importance": "高",
+    "score": 8,
+    "summary_ja": "Uberが3万人以上の全従業員を対象にChatGPT Workを導入し、業務効率化を図ります。",
+    "title_ja": "Uber、全社員向けにChatGPT Workを導入",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "企業導入"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
+    "item_id": "87a5301385b1672fc43b98ebd4b0af819af2cb06c036fc52ef8cf76a458bdbfc",
+    "title": "Beyond tree cover: mapping the world’s forest types",
+    "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+    "summary": "A global map categorizing every 10-meter patch of land on Earth into distinct forest types.",
+    "source": "Google DeepMind Blog",
+    "channel": "RSS",
+    "published_at": "2026-10-22T14:30:24+00:00",
+    "category": "研究・論文",
+    "importance": "中",
+    "score": 8,
+    "summary_ja": "地球上の10メートル四方の土地を森林タイプに分類したグローバルマップが公開されました。",
+    "title_ja": "DeepMind、世界の森林タイプを高精度マッピング",
+    "tags": [
+      "DeepMind",
+      "環境",
+      "マッピング"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
+    "item_id": "e7c90762c0e71b8eba9d7b48c5ea88b3677d94315ab15c683d97e4968ae8c599",
+    "title": "Open call for guest investigators in the life sciences",
+    "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+    "summary": "Today, we’re inviting members of the life sciences community to apply to work with us on special projects.",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-22T00:00:00+00:00",
+    "category": "その他",
+    "importance": "低",
+    "score": 2,
+    "summary_ja": "Anthropicが生命科学コミュニティから特別プロジェクトの共同研究者を募集しています。",
+    "title_ja": "生命科学分野のゲスト研究員を公募",
+    "tags": [
+      "Anthropic",
+      "ライフサイエンス",
+      "募集"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
+    "item_id": "03626b1602ab38eb15b5736da5cf998cc781bbf470ef472379242e1b53297e49",
+    "title": "Donating Agent Skills to the Agentic AI Foundation",
+    "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+    "summary": "We’re donating Agent Skills, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation. More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the standard in December 2025.",
+    "source": "Anthropic News",
+    "channel": "RSS",
+    "published_at": "2026-10-22T00:00:00+00:00",
+    "category": "新機能",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Anthropicが、AIエージェント向けオープン標準であるAgent Skillsを財団へ寄贈しました。",
+    "title_ja": "Agent SkillsをAgentic AI Foundationへ寄贈",
+    "tags": [
+      "Anthropic",
+      "AIエージェント",
+      "オープン標準"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
+    "item_id": "32de506d470d0a33e0d05c5d7efde1cb3eeb7c138b266a5b052bd18484c08f5c",
+    "title": "LLMs are making formal software verification feasible at a much larger scale",
+    "url": "https://www.anthropic.com/research/formal-verification",
+    "summary": "Formal verification can prove that code is free of certain bugs, but historically it has only been feasible for small codebases. With AI models, however, this is beginning to change. Here, we used Claude to prove security properties in over one hundred real-world open-source libraries over the span of a few weeks.",
+    "source": "Anthropic Research",
+    "channel": "RSS",
+    "published_at": "2026-10-22T00:00:00+00:00",
+    "category": "研究・論文",
+    "importance": "高",
+    "score": 9,
+    "summary_ja": "Claudeを活用することで、大規模なオープンソースライブラリのコード形式検証が可能になる研究成果です。",
+    "title_ja": "LLMを活用した大規模なソフトウェア形式検証",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "形式検証",
+      "セキュリティ"
+    ],
+    "topic_id": "ai-models",
+    "processed_at": "2026-10-23T00:30:49.871895+00:00"
+  },
+  {
     "item_id": "5e71ad164e296761861ccf6583874dabd454a04098c9fc96be69ac5a47dabe15",
     "title": "How AT&T is rethinking in-house legal work with OpenAI",
     "url": "https://openai.com/index/att-legal",
